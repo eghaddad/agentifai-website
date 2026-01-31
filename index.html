@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentifAI - Enterprise AI That Actually Ships</title>
+    <meta name="description" content="Agentic AI solutions for mid-market enterprises. Certified Microsoft 365 & Google Cloud partner serving GCC/MENA with AI-accelerated delivery.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0F172A;
+            --accent: #0D9488;
+            --light: #F8FAFC;
+            --gray: #64748B;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+            color: var(--white);
+            padding: 120px 2rem 80px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #0f766e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(13, 148, 136, 0.3);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Problem/Solution */
+        .problem-solution {
+            background: var(--light);
+        }
+
+        .problem-solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .problem-solution-content h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .problem-solution-content p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--gray);
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: var(--light);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, var(--accent), #0f766e);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .product-header h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-content {
+            padding: 2rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            color: var(--gray);
+        }
+
+        .product-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Why AgentifAI */
+        .why-agentifai {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .why-agentifai .section-header h2 {
+            color: var(--white);
+        }
+
+        .why-agentifai .section-header p {
+            color: #cbd5e1;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .feature h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .feature p {
+            color: #cbd5e1;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            position: relative;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .pricing-header {
+            margin-bottom: 2rem;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-range {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            color: var(--gray);
+        }
+
+        /* About */
+        .about {
+            background: var(--light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .founder-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .founder-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #0f766e);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .about-content h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-details h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--primary);
+        }
+
+        .contact-details p {
+            color: var(--gray);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 1rem;
+            text-align: center;
+            color: #94a3b8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .problem-solution-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .section {
+                padding: 60px 1rem;
+            }
+
+            .hero {
+                padding: 100px 1rem 60px;
+            }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">AgentifAI</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <h1>Enterprise AI That Actually Ships</h1>
+            <p class="subtitle">Agentic AI solutions for problems enterprise software left behind. Serving GCC/MENA mid-market enterprises with AI-accelerated delivery in weeks, not months.</p>
+            <a href="#contact" class="cta-button">Book a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-solution section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Gap Enterprise Software Left Behind</h2>
+                <p>Projects worth $5K-$50K are too small for Accenture, too complex for SaaS, and too risky for freelancers</p>
+            </div>
+            <div class="problem-solution-grid">
+                <div class="problem-solution-content">
+                    <h3>The Problem</h3>
+                    <p><strong>80% of business problems</strong> remain unsolved by software because custom development costs $500K-$2M and takes 12-18 months.</p>
+                    <p>Legal contract review costs $300-500/hour. UAE fintech licensing requires $50K-100K in consulting. Agricultural operations waste 40% of water due to manual systems.</p>
+                    <p><strong>The result:</strong> Mid-market enterprises are stuck between expensive custom builds and ill-fitting SaaS solutions.</p>
+                </div>
+                <div class="highlight-box">
+                    <h3>Our Solution</h3>
+                    <p><strong>AI has changed the economics.</strong> What required $2M and 18 months in 2020 now costs $50K-200K and takes 8-12 weeks.</p>
+                    <p>We build production-ready agentic AI applications for underserved verticals with deep regional expertise, bilingual capabilities, and enterprise-grade security.</p>
+                    <p><strong>Fixed-price packages. Delivered in weeks. Built for the GCC.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Specialized AI solutions across key verticals with bilingual Arabic-English support</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Legal AI</h3>
+                    <p>Contract lifecycle management, clause extraction, risk analysis, and obligation tracking with native Arabic-English support for GCC legal frameworks.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📋</div>
+                    <h3>Regulatory Compliance</h3>
+                    <p>Navigate UAE regulatory complexity (VARA, CBUAE) with AI-powered classification, requirement mapping, and document generation.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏢</div>
+                    <h3>Microsoft 365 Solutions</h3>
+                    <p>30+ fixed-price packages for workflow automation, document management, and business intelligence on your existing M365 platform.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">☁️</div>
+                    <h3>Google Workspace Solutions</h3>
+                    <p>Intelligent automation and AI assistants built natively on Google Workspace with seamless integration and familiar interfaces.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌱</div>
+                    <h3>AgriTech AI</h3>
+                    <p>Precision irrigation systems with AI-driven recommendations and human-in-the-loop control for sustainable agriculture.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🤖</div>
+                    <h3>Custom AI Solutions</h3>
+                    <p>Bespoke agentic AI applications tailored to your specific business needs with enterprise security and audit trails.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We Work</h2>
+                <p>Our proven 3-step process delivers enterprise AI solutions in weeks</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Consult</h3>
+                    <p>We analyze your business processes, identify AI opportunities, and design a solution architecture that fits your existing workflows and compliance requirements.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Build</h3>
+                    <p>Our team builds your solution using AI-accelerated development, modern agent architectures, and enterprise-grade security with human-in-the-loop controls.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Deploy</h3>
+                    <p>We deploy on your existing platforms (Microsoft 365, Google Workspace, or cloud), train your team, and provide ongoing support and optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <p>Production-ready AI solutions built specifically for GCC/MENA markets</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <div class="product-header">
+                        <h3>ContractMind AI</h3>
+                        <p>Legal Contract Intelligence</p>
+                    </div>
+                    <div class="product-content">
+                        <p>5-agent AI system for end-to-end contract lifecycle management with bilingual Arabic-English support and GCC legal framework expertise.</p>
+                        <ul class="product-features">
+                            <li>✓ Automated clause extraction and risk identification</li>
+                            <li>✓ Arabic-English bilingual analysis</li>
+                            <li>✓ GCC legal framework compliance</li>
+                            <li>✓ Obligation tracking and deadline management</li>
+                            <li>✓ $50/contract vs $500+ traditional review</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-header">
+                        <h3>Tanzim</h3>
+                        <p>UAE Regulatory Compliance</p>
+                    </div>
+                    <div class="product-content">
+                        <p>AI-powered regulatory navigation for UAE fintech and crypto businesses, purpose-built for VARA and CBUAE frameworks.</p>
+                        <ul class="product-features">
+                            <li>✓ Business activity classification</li>
+                            <li>✓ License requirement determination</li>
+                            <li>✓ Compliance document generation</li>
+                            <li>✓ VARA/CBUAE framework expertise</li>
+                            <li>✓ $10K vs $50K-100K consultant fees</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-header">
+                        <h3>AI-Trader</h3>
+                        <p>Fintech Intelligence</p>
+                    </div>
+                    <div class="product-content">
+                        <p>AI-powered financial research and analysis platform for investment firms and fintech companies operating in MENA markets.</p>
+                        <ul class="product-features">
+                            <li>✓ Automated market research and analysis</li>
+                            <li>✓ Real-time financial data processing</li>
+                            <li>✓ MENA market expertise</li>
+                            <li>✓ Risk assessment and reporting</li>
+                            <li>✓ Regulatory compliance monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why AgentifAI -->
+    <section class="why-agentifai section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why AgentifAI</h2>
+                <p>Unique advantages that deliver superior outcomes for GCC/MENA enterprises</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature fade-in">
+                    <div class="feature-icon">⚡</div>
+                    <h3>AI-Accelerated Delivery</h3>
+                    <p>Using "vibe coding" with Claude Code, Cursor, and GitHub Copilot, we deliver in weeks what traditionally took months.</p>
+                </div>
+                <div class="feature fade-in">
+                    <div class="feature-icon">💰</div>
+                    <h3>Fixed Pricing</h3>
+                    <p>Transparent, fixed-price packages from $3K-$50K. No scope creep, no surprises, no hourly billing.</p>
+                </div>
+                <div class="feature fade-in">
+                    <div class="feature-icon">🌍</div>
+                    <h3>GCC Expertise</h3>
+                    <p>Deep understanding of GCC business culture, regulatory landscape, and bilingual Arabic-English requirements.</p>
+                </div>
+                <div class="feature fade-in">
+                    <div class="feature-icon">🏅</div>
+                    <h3>Certified Partners</h3>
+                    <p>Microsoft 365 and Google Cloud certified partners with enterprise-grade security and compliance capabilities.</p>
+                </div>
+                <div class="feature fade-in">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Human-in-the-Loop</h3>
+                    <p>AI suggests, humans decide. Every critical decision has approval workflows for compliance and trust.</p>
+                </div>
+                <div class="feature-icon">🇦🇪</div>
+                    <h3>Dubai-Based</h3>
+                    <p>Founded and operated in Dubai with local market knowledge and timezone-aligned support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transparent Pricing</h2>
+                <p>Fixed-price packages designed for mid-market enterprises</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">$3K-$5K</div>
+                        <div class="price-range">1-2 week delivery</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Single workflow automation</li>
+                        <li>AI chatbot or assistant</li>
+                        <li>Basic dashboard and reporting</li>
+                        <li>Email and chat support</li>
+                        <li>30-day warranty</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Get Started</a>
+                </div>
+                <div class="pricing-card featured fade-in">
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">$8K-$15K</div>
+                        <div class="price-range">2-4 week delivery</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Multi-step agentic process</li>
+                        <li>System integration</li>
+                        <li>Advanced analytics</li>
+                        <li>Training and documentation</li>
+                        <li>90-day support</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Most Popular</a>
+                </div>
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">$20K-$50K</div>
+                        <div class="price-range">4-8 week delivery</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Complex multi-system solution</li>
+                        <li>Custom AI model training</li>
+                        <li>Enterprise security & compliance</li>
+                        <li>Dedicated project manager</li>
+                        <li>1-year support & optimization</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About AgentifAI</h2>
+                <p>Founded to bridge the gap between enterprise needs and AI capabilities</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="founder-card fade-in">
+                        <div class="founder-avatar">EH</div>
+                        <h4>Elias Haddad</h4>
+                        <p>Founder & CEO</p>
+                        <p style="color: var(--gray); font-size: 0.9rem; margin-top: 1rem;">Based in Dubai, UAE</p>
+                    </div>
+                </div>
+                <div class="about-content fade-in">
+                    <h3>Our Mission</h3>
+                    <p>To deliver production-ready agentic AI solutions on the platforms businesses already use, closing the gap between what enterprises need and what they can access affordably.</p>
+                    
+                    <h3>Our Vision</h3>
+                    <p>To become the leading certified AI partner in the GCC/MENA region for Microsoft and Google ecosystems, ultimately building a platform of reusable agentic AI templates that any business can deploy.</p>
+                    
+                    <h3>Why We Started AgentifAI</h3>
+                    <p>We saw that 80% of business problems remain unsolved by software because custom development was too expensive and time-consuming. With AI's cost collapse, we can now address problems worth $5K-$50K that were previously uneconomical to solve.</p>
+                    
+                    <p>Founded in Dubai, we combine deep GCC market knowledge with cutting-edge AI capabilities to serve enterprises that global players have overlooked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Started Today</h2>
+                <p>Ready to transform your business with AI? Let's discuss your specific needs.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form fade-in">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="legal-ai">Legal AI / ContractMind</option>
+                                <option value="regulatory">Regulatory Compliance / Tanzim</option>
+                                <option value="m365">Microsoft 365 Solutions</option>
+                                <option value="google">Google Workspace Solutions</option>
+                                <option value="agritech">AgriTech / Precision Irrigation</option>
+                                <option value="custom">Custom AI Solution</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your specific needs and challenges..." required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info fade-in">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Dubai, United Arab Emirates</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>hello@agentifai.io</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-details">
+                            <h4>Response Time</h4>
+                            <p>Within 24 hours (GST timezone)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-details">
+                            <h4>Languages</h4>
+                            <p>Arabic, English</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: var(--light); border-radius: 8px;">
+                        <h4 style="color: var(--primary); margin-bottom: 1rem;">Why Choose AgentifAI?</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.25rem 0; color: var(--gray);">✓ Fixed-price transparency</li>
+                            <li style="padding: 0.25rem 0; color: var(--gray);">✓ Weeks not months delivery</li>
+                            <li style="padding: 0.25rem 0; color: var(--gray);">✓ GCC market expertise</li>
+                            <li style="padding: 0.25rem 0; color: var(--gray);">✓ Enterprise-grade security</li>
+                            <li style="padding: 0.25rem 0; color: var(--gray);">✓ Arabic-English bilingual</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentifAI</h3>
+                <p>Enterprise AI solutions for the GCC/MENA region. Building the future of business automation with agentic AI.</p>
+                <p>📍 Dubai, UAE</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#services">Legal AI</a>
+                <a href="#services">Regulatory Compliance</a>
+                <a href="#services">Microsoft 365 Solutions</a>
+                <a href="#services">Google Workspace Solutions</a>
+                <a href="#services">Custom AI Development</a>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <a href="#products">ContractMind AI</a>
+                <a href="#products">Tanzim</a>
+                <a href="#products">AI-Trader</a>
+                <a href="#products">Precision Irrigation</a>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <a href="#about">About Us</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AgentifAI. All rights reserved. | Certified Microsoft 365 & Google Cloud Partner</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission handler (placeholder)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+        });
+    </script>
+</body>
+</html>
