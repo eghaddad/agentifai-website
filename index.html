@@ -52,9 +52,13 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 44px;
+            width: auto;
         }
 
         .nav-menu {
@@ -678,7 +682,9 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">AgentifAI</div>
+            <div class="logo">
+                <img src="agentifai-logo.png" alt="AgentifAI" />
+            </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -698,6 +704,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
+            <div style="margin-bottom: 2rem;">
+                <img src="agentifai-logo.png" alt="AgentifAI" style="height: 80px; width: auto;" />
+            </div>
             <h1>Enterprise AI That Actually Ships</h1>
             <p class="subtitle">Agentic AI solutions for problems enterprise software left behind. Serving GCC/MENA mid-market enterprises with AI-accelerated delivery in weeks, not months.</p>
             <a href="#contact" class="cta-button">Book a Consultation</a>
@@ -1079,7 +1088,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>AgentifAI</h3>
+                <img src="agentifai-logo.png" alt="AgentifAI" style="height: 40px; width: auto; margin-bottom: 1rem; display: block;" />
                 <p>Enterprise AI solutions for the GCC/MENA region. Building the future of business automation with agentic AI.</p>
                 <p>📍 Dubai, UAE</p>
             </div>
