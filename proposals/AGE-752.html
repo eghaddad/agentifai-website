@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGE-752: Juris 3.0 — Pure Agentic Law Firm — AgentifAI</title>
+  <style>
+    :root { --navy: #0f172a; --blue: #3b82f6; --indigo: #6366f1; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--navy); color: #e2e8f0; line-height: 1.7; padding: 2rem; }
+    .container { max-width: 900px; margin: 0 auto; background: #1e293b; border-radius: 12px; padding: 3rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+    h1 { color: #fff; font-size: 2rem; margin-bottom: 0.5rem; border-bottom: 3px solid var(--blue); padding-bottom: 1rem; }
+    .meta { color: #94a3b8; margin-bottom: 2rem; }
+    .recommendation { background: linear-gradient(135deg, var(--blue), var(--indigo)); color: #fff; padding: 1rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 1.1rem; margin-bottom: 2rem; display: inline-block; }
+    h2 { color: var(--blue); font-size: 1.4rem; margin: 2rem 0 1rem; border-left: 4px solid var(--indigo); padding-left: 1rem; }
+    p { margin-bottom: 1rem; }
+    strong { color: #fff; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { border: 1px solid #334155; padding: 0.75rem; text-align: left; }
+    th { background: #334155; color: #fff; }
+    tr:nth-child(even) { background: #1a2332; }
+    ul, ol { margin: 1rem 0 1rem 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    hr { border: none; border-top: 1px solid #334155; margin: 2rem 0; }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #334155; color: #64748b; font-size: 0.9rem; text-align: center; }
+    a { color: var(--blue); }
+  </style>
+</head>
+<body>
+<div class="container">
+<h1>Business Case — Juris 3.0: Agentic Law Firm OS</h1>
+
+<div class="meta">
+<strong>Issue:</strong> AGE-752 | <strong>Date:</strong> 2026-03-27 | <strong>Recommendation:</strong> <span class="recommendation">PROCEED (scoped)</span>
+</div>
+
+<hr>
+
+<h2>1. Opportunity</h2>
+
+<p>Law firms don't have an AI tool problem — they have an <strong>AI workforce gap</strong>. Every current legal AI product requires a lawyer to stop working and operate it. Juris 3.0 builds AI that works <em>while the lawyer works</em>.</p>
+
+<p>The gap: No competitor has built (a) a personal AI agent per lawyer that knows their calendar, clients, and matters, (b) ambient voice presence in meetings and hearings, or (c) multi-agent orchestration where specialized agents collaborate without prompting.</p>
+
+<p><strong>Window:</strong> 18-24 months before Harvey adds voice and TR deepens Materia integration.</p>
+
+<hr>
+
+<h2>2. What Makes Pure Agentic Different</h2>
+
+<p><strong>Tool model:</strong> Lawyer initiates → gets output → acts on it.<br>
+<strong>Agentic model:</strong> Lawyer works → agent observes, acts, escalates → lawyer reviews outcomes.</p>
+
+<p>A tool saves 20 minutes on tasks the lawyer starts. An agent captures time that was never being captured — meetings never summarized, follow-ups never drafted, billing entries forgotten at 6pm. Agentic AI monetizes legal work that currently evaporates.</p>
+
+<p><strong>Challenge to own assumption:</strong> Harvey already claims "agentic" with 25,000+ workflow agents. Juris 3.0 must ship <em>proactive, cross-domain agency</em> — agents acting unprompted across calendar, research, drafting, and billing simultaneously. A fancier prompt interface collapses the differentiation.</p>
+
+<hr>
+
+<h2>3. Competitive Landscape</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Competitor</th>
+  <th>Voice</th>
+  <th>Personal Memory</th>
+  <th>Firm Ops</th>
+  <th>Mid-Market Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Harvey ($11B)</td>
+  <td>None</td>
+  <td>None</td>
+  <td>None</td>
+  <td>No</td>
+</tr>
+<tr>
+  <td>CoCounsel/TR</td>
+  <td>None</td>
+  <td>None</td>
+  <td>None</td>
+  <td>Partial</td>
+</tr>
+<tr>
+  <td>Spellbook</td>
+  <td>None</td>
+  <td>None</td>
+  <td>None</td>
+  <td>Yes</td>
+</tr>
+<tr>
+  <td>Lexis+ Protégé</td>
+  <td>Voice Q&A only</td>
+  <td>None</td>
+  <td>None</td>
+  <td>Partial</td>
+</tr>
+<tr>
+  <td>Westlaw AI</td>
+  <td>None</td>
+  <td>None</td>
+  <td>None</td>
+  <td>Yes (base)</td>
+</tr>
+<tr>
+  <td><strong>Juris 3.0</strong></td>
+  <td><strong>Core</strong></td>
+  <td><strong>Core</strong></td>
+  <td><strong>v2</strong></td>
+  <td><strong>Core</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p>Harvey's brand trust at AmLaw 100 and $11B war chest make direct competition for that segment suicidal in Years 1-2. CoCounsel's Westlaw content moat is a better partnership than a target.</p>
+
+<hr>
+
+<h2>4. Voice-First Advantage</h2>
+
+<p>Lawyers talk for a living. Text-first AI requires behavior change; voice-first requires none.</p>
+
+<p><strong>Specific value:</strong> Meeting transcription → auto-summarized action items. Deposition notes captured in real-time. Voice dictation → first-draft pleadings. All while the lawyer is doing the actual legal work.</p>
+
+<p>LexisNexis announced "legal industry's first voice AI assistant" but it appears limited to voice Q&A. Ambient meeting presence, dictation-to-action, and proactive execution remain unclaimed.</p>
+
+<p><strong>Honest risk:</strong> Voice in legal settings creates acute privilege breach exposure. If Juris 3.0 stores transcripts of attorney-client conversations and is breached, the liability is existential. Zero retention after processing, on-premise option for large firms, SOC 2 certification — these are not optional. Voice privacy architecture must be designed first, not retrofitted.</p>
+
+<hr>
+
+<h2>5. Multi-Agent Orchestration Defensibility</h2>
+
+<p>The Chief of Staff agent is the orchestrator — spawning research, drafting, and scheduling agents on demand, synthesizing outputs, managing the lawyer's time autonomously.</p>
+
+<p><strong>Real defensibility is the context layer</strong>, not multi-agent frameworks. Per-lawyer memory that compounds over months creates switching costs Harvey can't replicate: the longer a lawyer uses Juris 3.0, the more context their Chief of Staff accumulates. Day 1 value is modest. Month 12 value is irreplaceable.</p>
+
+<hr>
+
+<h2>6. Features to Build (Prioritized)</h2>
+
+<p><strong>v1 (launch):</strong> Chief of Staff (voice + calendar + memory + meeting transcription) → On-demand research agent (API-integrated with Westlaw or Lexis, not built) → Drafting agent (extending Juris's existing capability).</p>
+
+<p><strong>v2:</strong> Intake/conflicts agent, billing agent (Clio/MyCase integration), custom agent builder.</p>
+
+<p><strong>Do NOT build:</strong> Legal research database. Competing with Westlaw's 40-year content moat requires $100M+. Partner via API instead.</p>
+
+<hr>
+
+<h2>7. Revenue Model</h2>
+
+<p><strong>Tiered per-seat subscription:</strong></p>
+<ul>
+  <li>Chief of Staff: $350/lawyer/month (voice, memory, scheduling, transcription)</li>
+  <li>Full Platform: $600/lawyer/month (adds research + drafting agents)</li>
+  <li>Firm OS: Custom (adds operational agents)</li>
+</ul>
+
+<p><strong>ROI story:</strong> $350/month = $4,200/year. Voice transcription saving 3 hours/month at $250/hr yields 5:1 ROI. Westlaw Advantage costs $2,400-6,000/lawyer/year for research alone — Juris 3.0 pricing is credible against that benchmark.</p>
+
+<p><strong>Honest risk:</strong> $350/month may be too high for small litigation firms. Validate with 10+ managing partner conversations before pricing locks.</p>
+
+<hr>
+
+<h2>8. Distribution Strategy</h2>
+
+<p><strong>Beachhead:</strong> Existing Juris customers. They know the brand, are already paying, and competitors will poach them during any product gap. Convert them first.</p>
+
+<p><strong>Primary channel:</strong> Managing partners are economic buyers who influence each other. Events (ILTA, LegalWeek) plus direct outreach have fast sales cycles.</p>
+
+<p><strong>Why this beats Harvey:</strong> Harvey's enterprise motion requires 6-12 month cycles and legal technology committees. Mid-market managing partners decide in a week. Speed of sale is a structural advantage.</p>
+
+<hr>
+
+<h2>9. Build Recommendation</h2>
+
+<p><strong>PROCEED — with three non-negotiable constraints:</strong></p>
+
+<ol>
+  <li><strong>Voice privacy architecture designed before any voice feature ships.</strong> One privilege breach kills the company.</li>
+  <li><strong>10 managing partner discovery calls before product spec locks.</strong> Validate voice as #1 pain point and $350/month price point with actual buyers.</li>
+  <li><strong>v1 scope held firm.</strong> Three things exceptionally, not six things adequately. Chief of Staff + two agent types, nothing more until the first cohort is delighted and referenceable.</li>
+</ol>
+
+<p><strong>Why this beats Harvey:</strong> Harvey cannot reposition — they are the enterprise workflow tool. Juris 3.0 can own "the AI partner every lawyer has" at mid-market pricing before Harvey finishes their next enterprise sales cycle. The mid-market is structurally undefended and Harvey's architecture is fundamentally document-centric. That's not a gap Harvey can close quickly.</p>
+
+<hr>
+
+<div class="footer">
+  <p><em>Sources: Competitive research March 27, 2026. research-summary.md, market-analysis.md, competitive-strategy.md.</em></p>
+  <p><a href="https://agentifai.com">AgentifAI</a> • <a href="https://agentifai.com/proposals">All Proposals</a></p>
+</div>
+
+</div>
+</body>
+</html>
