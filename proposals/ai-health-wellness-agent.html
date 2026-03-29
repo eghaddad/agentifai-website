@@ -12,7 +12,6 @@
     h1 { color: #fff; font-size: 2rem; margin-bottom: 0.5rem; border-bottom: 3px solid var(--blue); padding-bottom: 1rem; }
     .meta { color: #94a3b8; margin-bottom: 2rem; }
     .recommendation { background: linear-gradient(135deg, var(--blue), var(--indigo)); color: #fff; padding: 1rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 1.1rem; margin-bottom: 2rem; display: inline-block; }
-    h3 { color: #93c5fd; font-size: 1.1rem; margin: 1.5rem 0 0.75rem; }
     h2 { color: var(--blue); font-size: 1.4rem; margin: 2rem 0 1rem; border-left: 4px solid var(--indigo); padding-left: 1rem; }
     p { margin-bottom: 1rem; }
     strong { color: #fff; }
@@ -25,6 +24,18 @@
     hr { border: none; border-top: 1px solid #334155; margin: 2rem 0; }
     .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #334155; color: #64748b; font-size: 0.9rem; text-align: center; }
     a { color: var(--blue); }
+  
+    .toc { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .toc ol { counter-reset: toc; list-style: none; padding-left: 0; columns: 2; column-gap: 2rem; }
+    .toc li { counter-increment: toc; margin-bottom: 0.4rem; }
+    .toc li::before { content: counter(toc) ". "; color: #64748b; font-weight: 600; }
+    .toc a { color: #93c5fd; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    h2 { scroll-margin-top: 2rem; }
+    h3 { color: #93c5fd; font-size: 1.1rem; margin: 1.5rem 0 0.75rem; }
+    .back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; font-size: 0.85rem; opacity: 0.8; }
+    .back-to-top:hover { opacity: 1; }
+
   </style>
 </head>
 <body>
@@ -38,8 +49,14 @@
 <strong>Issue ID:</strong> 0c767c6f-2edd-4d61-96a0-fa534d31e21a
 
 <hr>
+<div class="verdict-badge" style="background: rgba(234, 179, 8, 0.15); border: 2px solid #eab308; border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; text-align: center;">
+  <div style="font-size: 2rem; font-weight: 700; color: #eab308; margin-bottom: 0.5rem;">🟡 CONDITIONAL GO</div>
+  <div style="color: #e2e8f0; font-size: 1rem;">Viable with adjustments. Review conditions below before committing.</div>
+  <div style="margin-top: 0.5rem;"><span style="color: #94a3b8; font-size: 0.9rem; margin-left: 1rem;">Confidence: Medium</span></div>
+</div>
 
-<h2>Executive Summary</h2>
+
+<h2 id="executive-summary">Executive Summary</h2>
 
 <h3>Viability Verdict: <strong>CONDITIONALLY VIABLE</strong></h3>
 
@@ -70,7 +87,7 @@
 
 <hr>
 
-<h2>Section 1: Opportunity</h2>
+<h2 id="section-1-opportunity">Section 1: Opportunity</h2>
 
 <h3>Market Context</h3>
 
@@ -100,7 +117,7 @@
 
 <hr>
 
-<h2>Section 2: Competitive Landscape</h2>
+<h2 id="section-2-competitive-landscape">Section 2: Competitive Landscape</h2>
 
 <h3>Competitor Overview</h3>
 
@@ -126,7 +143,7 @@
 
 <hr>
 
-<h2>Section 3: Differentiation Strategy</h2>
+<h2 id="section-3-differentiation-strategy">Section 3: Differentiation Strategy</h2>
 
 <h3>The Wedge: Proactive AI Coaching Layer</h3>
 
@@ -155,7 +172,7 @@
 </ul>
 <hr>
 
-<h2>Section 4: Features to Build</h2>
+<h2 id="section-4-features-to-build">Section 4: Features to Build</h2>
 
 <p>Phased feature roadmap based on competitive analysis and technical feasibility.</p>
 
@@ -193,7 +210,7 @@
 
 <hr>
 
-<h2>Section 5: Features to Skip</h2>
+<h2 id="section-5-features-to-skip">Section 5: Features to Skip</h2>
 
 <p>These are explicitly recommended against based on competitive trap analysis.</p>
 
@@ -209,7 +226,7 @@
 
 <hr>
 
-<h2>Section 6: Revenue Model</h2>
+<h2 id="section-6-revenue-model">Section 6: Revenue Model</h2>
 
 <h3>Recommended: Consumer Subscription First, B2B in Year 2</h3>
 
@@ -259,7 +276,7 @@
 
 <hr>
 
-<h2>Section 7: Risks</h2>
+<h2 id="section-7-risks">Section 7: Risks</h2>
 
 <table>
 <tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr>
@@ -274,7 +291,7 @@
 
 <hr>
 
-<h2>Section 8: Challenge / Devil's Advocate</h2>
+<h2 id="section-8-challenge-devil-s-advocate">Section 8: Challenge / Devil's Advocate</h2>
 
 <table>
 <tr><td>Challenge Thesis</td><td>Counter-Argument</td><td>Resolution</td></tr>
@@ -287,7 +304,7 @@
 
 <hr>
 
-<h2>Section 9: Build Recommendation</h2>
+<h2 id="section-9-build-recommendation">Section 9: Build Recommendation</h2>
 
 <h3>Verdict: <strong>CONDITIONALLY VIABLE</strong></h3>
 
@@ -359,7 +376,7 @@
 </ul>
 <hr>
 
-<h2>Section 10: Architecture Overview</h2>
+<h2 id="section-10-architecture-overview">Section 10: Architecture Overview</h2>
 
 <h3>System Design Philosophy</h3>
 
@@ -449,7 +466,7 @@
 </ul>
 <hr>
 
-<h2>Section 11: Build Effort</h2>
+<h2 id="section-11-build-effort">Section 11: Build Effort</h2>
 
 <h3>Team Size and Roles</h3>
 
@@ -503,7 +520,7 @@
 
 <hr>
 
-<h2>Section 12: Technical Risks & Dependencies</h2>
+<h2 id="section-12-technical-risks-dependencies">Section 12: Technical Risks & Dependencies</h2>
 
 <h3>Critical Technical Risks</h3>
 
@@ -539,7 +556,7 @@
 </ul>
 <hr>
 
-<h2>Section 13: Build Cost</h2>
+<h2 id="section-13-build-cost">Section 13: Build Cost</h2>
 
 <h3>Team Composition</h3>
 
@@ -603,7 +620,7 @@
 
 <hr>
 
-<h2>Section 14: Operating Costs (Per User / Month)</h2>
+<h2 id="section-14-operating-costs-per-user-month">Section 14: Operating Costs (Per User / Month)</h2>
 
 <h3>LLM Costs</h3>
 
@@ -655,7 +672,7 @@
 
 <hr>
 
-<h2>Section 15: Unit Economics</h2>
+<h2 id="section-15-unit-economics">Section 15: Unit Economics</h2>
 
 <h3>Scenario A: As-Is Plan</h3>
 
@@ -732,7 +749,7 @@
 
 <hr>
 
-<h2>Section 16: 3-Year P&L Projection</h2>
+<h2 id="section-16-3-year-p-l-projection">Section 16: 3-Year P&L Projection</h2>
 
 <h3>Key Assumptions</h3>
 
@@ -824,7 +841,7 @@
 
 <hr>
 
-<h2>Financial Model Summary</h2>
+<h2 id="financial-model-summary">Financial Model Summary</h2>
 
 <h3>Go/No-Go Financial Perspective</h3>
 
@@ -853,7 +870,7 @@
 
 <hr>
 
-<h2>Final Recommendation</h2>
+<h2 id="final-recommendation">Final Recommendation</h2>
 
 <h3>BUILD — Proceed to MVP with all five viability adjustments implemented.</h3>
 
@@ -894,6 +911,7 @@
   <p><a href="https://agentifai.io">agentifai.io</a></p>
 </div>
 </div>
+<a href="#" class="back-to-top">↑ Top</a>
 </body>
 </html>
 

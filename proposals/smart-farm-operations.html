@@ -1,0 +1,2976 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>AI Irrigation Copilot - Business Case Analysis</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  
+    .toc { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .toc ol { counter-reset: toc; list-style: none; padding-left: 0; columns: 2; column-gap: 2rem; }
+    .toc li { counter-increment: toc; margin-bottom: 0.4rem; }
+    .toc li::before { content: counter(toc) ". "; color: #64748b; font-weight: 600; }
+    .toc a { color: #93c5fd; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    h2 { scroll-margin-top: 2rem; }
+    h3 { color: #93c5fd; font-size: 1.1rem; margin: 1.5rem 0 0.75rem; }
+    .back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; font-size: 0.85rem; opacity: 0.8; }
+    .back-to-top:hover { opacity: 1; }
+
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">AI Irrigation Copilot - Business Case Analysis</h1>
+</header>
+<h1
+id="business-case-ai-irrigation-copilot-for-mid-market-farms">Business
+Case: AI Irrigation Copilot for Mid-Market Farms</h1>
+<h2 id="smart-farm-operations-sustainability-platform">Smart Farm
+Operations &amp; Sustainability Platform</h2>
+<p><strong>Prepared by:</strong> Business Analyst
+(82327e75-1204-404b-89c7-a90da8455562)<br />
+<strong>Date:</strong> March 29, 2026<br />
+<strong>Pipeline Step:</strong> 6 — synthesize<br />
+<strong>Inputs:</strong> expert-industry.md · expert-competitive.md ·
+expert-business-strategy.md · research-summary.md ·
+competitive/*.md<br />
+<strong>Iteration:</strong> 1</p>
+<hr />
+<h2 id="section-1-opportunity">Section 1: Opportunity</h2>
+<h3 id="market-context">Market Context</h3>
+<p>The global precision agriculture market sits at <strong>$10–14
+billion (2025)</strong>, projected to reach $22–25 billion by 2030 (CAGR
+~12–14%). The most relevant sub-segment — <strong>AI analytics for farm
+operations</strong> — is growing at 23% CAGR, from $2.0B to $5.8B by
+2030, making it the fastest-accelerating sub-segment in the stack.</p>
+<p>Smart irrigation specifically: <strong>$5.8B TAM (2025)</strong> →
+<strong>$10.5B (2030)</strong>, 12% CAGR. This is the primary market the
+platform addresses.</p>
+<h3 id="tam-sam-som">TAM / SAM / SOM</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tier</th>
+<th>2025</th>
+<th>2030</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>TAM</strong> — Global precision ag / smart irrigation /
+AgTech AI</td>
+<td>~$12–15B</td>
+<td>~$25B+</td>
+</tr>
+<tr class="even">
+<td><strong>SAM</strong> — Mid-market irrigated farms + enterprise water
+stewardship</td>
+<td>~$2.5–7B</td>
+<td>~$5–12B</td>
+</tr>
+<tr class="odd">
+<td><strong>SOM</strong> — Achievable 3-year startup wedge</td>
+<td>$10–25M ARR</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SAM breakdown:</strong> - 2–2.5 million farms globally with
+100+ irrigated acres capable of paying $1,200–$2,400/year =
+<strong>$2.4–6.0B</strong> - ~500 enterprise water stewardship programs
+at $250K–$2M/year = <strong>$125M–$1B</strong> - ~500
+agribusiness/cooperative buyers at $50K–$500K/year =
+<strong>$25–250M</strong></p>
+<h3 id="the-specific-opportunity">The Specific Opportunity</h3>
+<p>The Industry Expert identifies a <strong>critical inflection
+point</strong>: the AI-native, satellite-first, self-serve sub-segment
+targeting mid-market irrigated farms (100–1,000 acres) is only 3–5 years
+old and has no dominant player. Every incumbent has either gone
+enterprise-only, hardware-dependent, or stagnant. The mid-market segment
+— approximately 2–2.5 million globally addressable farms — is actively
+underserved.</p>
+<p><strong>Three forces are converging simultaneously (2026):</strong>
+1. <strong>Enabling technology has crossed viability</strong>: Satellite
+imagery APIs (Planet Labs, Sentinel-2) now deliver daily field-level
+NDVI at near-zero marginal cost. LLMs can generate farm-specific
+irrigation recommendations without custom model training. Soil sensors
+dropped from $500–800 to $80–150. 2. <strong>Regulatory demand is
+mandatory, not optional</strong>: SGMA water use mandates in California,
+CSRD/SEC Scope 3 requirements for corporate supply chains, and USDA EQIP
+subsidies are creating pull demand from both farmer and enterprise
+buyers that didn’t exist in 2022. 3. <strong>Market gap is
+structural</strong>: CropX cannot serve mid-market without cannibalizing
+dealer revenue. Arable pivoted to enterprise (Google/Amazon). Farmers
+Edge/Corvian abandoned the farmer-direct channel. FieldView is in
+maintenance mode. No incumbent <em>can</em> fill this gap without
+destroying their existing business.</p>
+<p><strong>Industry Expert timing verdict: ENTER NOW — 18–36 month
+window before incumbents respond or new well-funded entrants
+arrive.</strong></p>
+<hr />
+<h2 id="section-2-competitive-landscape">Section 2: Competitive
+Landscape</h2>
+<h3 id="competitor-table">Competitor Table</h3>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 15%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 13%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Competitor</th>
+<th>Segment</th>
+<th>Pricing (Est.)</th>
+<th>Key Strength</th>
+<th>Key Weakness</th>
+<th>Threat Level</th>
+<th>Response Timeline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CropX</strong></td>
+<td>Mid-to-large commercial farms, global</td>
+<td>$500–2,000/mo (hardware + SaaS)</td>
+<td>10+ yr validation, 20K+ users, 100+ crop models, proprietary
+sensors</td>
+<td>Dealer-only GTM, hardware-first locks out mid-market, no ESG
+reporting</td>
+<td>High (large farm)</td>
+<td>18–36 months for “lite” self-serve launch</td>
+</tr>
+<tr class="even">
+<td><strong>Netafim</strong></td>
+<td>Large-scale commercial, government projects</td>
+<td>Hardware project pricing, GrowSphere is retention tool</td>
+<td>60 yr brand, global installed base, government relationships</td>
+<td>Software is primitive, Orbia bureaucracy, absent from SMB</td>
+<td>Medium (partner/exit buyer)</td>
+<td>Won’t respond — will acquire at $10M+ ARR</td>
+</tr>
+<tr class="odd">
+<td><strong>Arable</strong></td>
+<td>Enterprise water stewardship + farm SaaS</td>
+<td>~$1,500+ per farm (Mark 3 hardware)</td>
+<td>Google/Amazon validation of enterprise ESG model</td>
+<td>Hardware-dependent, enterprise pivot de-prioritizes farmer product,
+no irrigation control</td>
+<td>Medium (direct competitor at enterprise)</td>
+<td>Slow response; hardware limits mid-market scalability</td>
+</tr>
+<tr class="even">
+<td><strong>Farmers Edge / Corvian</strong></td>
+<td>Enterprise data intelligence (insurance, biofuel, CPG Scope 3)</td>
+<td>Enterprise contracts</td>
+<td>Established data asset, Fairfax backing</td>
+<td>Abandoned farmer-direct; brand crisis from rebrand; can’t
+return</td>
+<td>Low</td>
+<td>Not competing for mid-market farmer</td>
+</tr>
+<tr class="odd">
+<td><strong>Climate FieldView (Bayer)</strong></td>
+<td>Row crop data collection, US distribution</td>
+<td>Free / ~$349/yr Plus tier</td>
+<td>60M+ acres enrolled, massive dealer network, FieldView
+integrations</td>
+<td>No irrigation module, Bayer data conflict of interest, maintenance
+mode</td>
+<td>Low-Medium (row crop only)</td>
+<td>Maintenance mode; 0 movement in irrigation</td>
+</tr>
+<tr class="even">
+<td><strong>AgEagle / EagleNXT</strong></td>
+<td>Drone-based monitoring, defense pivot</td>
+<td>$15–30K per system</td>
+<td>MicaSense sensor tech</td>
+<td>Pivoted to defense; ag is secondary; drone economics don’t scale to
+SMB</td>
+<td>Negligible</td>
+<td>Ignore</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-competitive-insights">Key Competitive Insights</h3>
+<p>The Competitive Strategist identifies the <strong>Farmers Edge
+failure as the most important data point in the analysis</strong>: a
+well-capitalized, multi-year platform could not make direct-to-farmer
+premium SaaS work. The lesson is not “avoid farmers” — it is “architect
+dual-revenue from day one.” Arable’s Google/Amazon deals are the second
+most important data point: enterprise ESG buyers pay 10–50x what farmers
+pay for the same data.</p>
+<p>The Industry Expert’s structural analysis of <strong>why incumbents
+can’t respond</strong> is credible: - CropX’s dealer channel
+<strong>cannot</strong> support self-serve without destroying dealer
+margin — Innovator’s Dilemma is real here - Bayer’s conflict of interest
+means FieldView <strong>can’t</strong> be a trusted platform for farmers
+reducing inputs - Netafim <strong>won’t</strong> build competitive
+software — they’ll acquire</p>
+<p><strong>Honest acknowledgment of competitor strengths:</strong> -
+CropX’s 10+ years of agronomic model development and 20,000+ validated
+deployments cannot be replicated quickly - Netafim’s physical installed
+base is an enormous distribution advantage that software cannot displace
+- Arable’s first-mover position with enterprise ESG buyers (Google,
+Amazon) gives them reference customers a new entrant won’t have at
+launch</p>
+<hr />
+<h2 id="section-3-differentiation-strategy">Section 3: Differentiation
+Strategy</h2>
+<h3 id="the-wedge">The Wedge</h3>
+<p><strong>AI irrigation intelligence delivered via satellite-first,
+hardware-optional architecture for 250–1,000 acre irrigated farms, with
+enterprise water stewardship data as a second revenue stream on the same
+data asset.</strong></p>
+<p>All three experts converge on this positioning with high agreement.
+The key differentiation axes:</p>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 17%" />
+<col style="width: 20%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>CropX</th>
+<th>Arable</th>
+<th>New Entrant</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hardware required?</td>
+<td>Yes (proprietary sensors)</td>
+<td>Yes (Mark 3 device)</td>
+<td>No (satellite + weather, day 1)</td>
+</tr>
+<tr class="even">
+<td>Mid-market pricing?</td>
+<td>No ($500–2,000/mo)</td>
+<td>No ($1,500+ installation)</td>
+<td>Yes ($149/mo)</td>
+</tr>
+<tr class="odd">
+<td>Self-serve onboarding?</td>
+<td>No (dealer-required)</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Enterprise ESG?</td>
+<td>No</td>
+<td>Yes (validated)</td>
+<td>Yes (replicating Arable’s model)</td>
+</tr>
+<tr class="odd">
+<td>Farmer-aligned (not Bayer)?</td>
+<td>Neutral</td>
+<td>Yes</td>
+<td>Yes (independent, open data ownership)</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="reconciling-industry-expert-vs.-competitive-strategist">Reconciling
+Industry Expert vs. Competitive Strategist</h3>
+<p><strong>Point of agreement:</strong> Both identify the
+satellite-first, dual-revenue model as the correct position. Both cite
+Arable and Farmers Edge as the primary analogies.</p>
+<p><strong>Minor tension:</strong> The Industry Expert emphasizes
+regulatory compliance (SGMA, CSRD) as the primary demand driver. The
+Competitive Strategist emphasizes features and pricing relative to
+CropX. Both are right — the differentiation strategy must be
+two-pronged: 1. <strong>Farmer-facing:</strong> Simplest path to
+measurable water savings, starting with satellite-only and zero hardware
+required 2. <strong>Enterprise-facing:</strong> Auditable,
+compliance-ready water stewardship data that meets CSRD/SEC reporting
+standards</p>
+<p>The wedge works because it solves <strong>both</strong> buyers’
+problems simultaneously with a single data collection
+infrastructure.</p>
+<h3 id="moat-architecture">Moat Architecture</h3>
+<p>The competitive moat deepens over time through: 1.
+<strong>Satellite-first cost floor</strong> — hardware-dependent
+competitors cannot match cost structure without destroying existing
+revenue 2. <strong>Enterprise ESG account lock-in</strong> — multi-year
+corporate sustainability program commitments are not easily poached 3.
+<strong>EQIP subsidy eligibility</strong> — government-approved
+platforms inherit government-subsidized CAC that competitors may not
+qualify for 4. <strong>Network effects</strong> — more farms in a
+watershed = more attractive ESG reporting data for enterprise buyers =
+higher enterprise ACV</p>
+<hr />
+<h2 id="section-4-features-to-build">Section 4: Features to Build</h2>
+<h3 id="phase-1-mvp-months-06">Phase 1 — MVP (Months 0–6)</h3>
+<p><strong>P1: AI Irrigation Scheduler (Satellite + Weather)</strong> -
+Daily irrigation recommendations based on satellite NDVI, weather
+forecast, soil type, crop stage - Zero hardware required — farm maps
+drawn in UI, satellite data auto-populated - Natural language
+recommendations (“Irrigate Block A for 4 hours Thursday morning — ET
+forecast shows high demand with no rain expected until Sunday”) -
+Sources: Inspired by CropX’s precision recommendations, simplified by
+Arable’s usability approach</p>
+<p><strong>P2: Water Savings Dashboard</strong> - Track actual
+vs. recommended irrigation; visualize water saved in gallons and $ -
+Automated water savings report generation (PDF, monthly and annual) -
+This is the core retention hook — farmers see ROI in numbers every time
+they log in</p>
+<p><strong>P3: Farm Onboarding — Self-Serve, Under 10 Minutes</strong> -
+Draw farm boundary → auto-populates satellite data → crop selection →
+first recommendation - No hardware, no dealer, no phone call required -
+Inspired by FieldView’s frictionless data import approach</p>
+<p><strong>P4: Subsidy Documentation Generator</strong> - Auto-generate
+USDA EQIP and EU CAP-compatible water use reports - This is a customer
+acquisition superpower — no competitor has operationalized it</p>
+<p><strong>P5: Free Tier</strong> - 1 field, satellite + weather AI
+only, 30-day history - Acquire farms at zero CAC; creates usage habit
+before paywall</p>
+<h3 id="phase-2-scale-months-718">Phase 2 — Scale (Months 7–18)</h3>
+<p><strong>P6: IoT Sensor Integration</strong> - Support for top 5–8
+soil moisture sensor brands (Sentek, Decagon, AquaCheck, Vegetronix) -
+Improves recommendation precision; upsell to Farm Pro subscribers -
+Hardware-optional, never hardware-required</p>
+<p><strong>P7: Enterprise Water Stewardship Report</strong> -
+Watershed-level water savings aggregation across enrolled farms -
+Auditable by third parties (Verra methodology compatibility) -
+Enterprise-grade: custom branding, API access, CSV/JSON export - This is
+the $25K–$250K/year product — build it by Month 12</p>
+<p><strong>P8: WhatsApp / SMS Advisory (Emerging Markets)</strong> -
+LLM-powered agronomic advisory via WhatsApp in local language - Targets
+India, MENA, Latin America — markets with low smartphone sophistication
+but high WhatsApp penetration - Near-zero marginal cost; opens 300M+
+hectare markets that CropX and Arable don’t serve</p>
+<p><strong>P9: Crop-Specific Models for Top 10 Irrigated Crops</strong>
+- Alfalfa, almonds, grapes, avocado, tomatoes, cotton, corn, soybeans,
+berries, citrus - LLM-powered initially (Month 1–6); replace with
+trained agronomic models over time (Year 2+) - Covers 80%+ of
+addressable irrigated acreage in target markets</p>
+<h3 id="phase-3-moat-building-year-2">Phase 3 — Moat Building (Year
+2+)</h3>
+<p><strong>P10: Water Credit / Carbon Monetization</strong> - Automatic
+water savings certification integrated with voluntary water credit
+exchanges - Farmers get paid for data they’re already generating - No
+competitor has made this farmer-facing and simple</p>
+<p><strong>P11: Cooperative / Multi-Farm Management</strong> -
+White-label for regional cooperatives; Farm Business tier ($399/month) -
+Opens agribusiness buyer segment</p>
+<hr />
+<h2 id="section-5-features-to-skip">Section 5: Features to Skip</h2>
+<h3 id="trap-1-full-stack-hardware-development">Trap #1: Full-Stack
+Hardware Development</h3>
+<p><strong>What it is:</strong> Building proprietary soil sensors,
+weather stations, or irrigation controllers (CropX approach).</p>
+<p><strong>Why it’s a trap:</strong> - AgEagle (drones + sensors) spent
+$7.3M acquiring MicaSense and couldn’t build a viable agricultural
+business - Hardware has 12–18 month development cycles, high COGS,
+supply chain risk, and massive capital requirements - Competing with
+CropX on sensor precision is a 10-year deficit that cannot be closed
+with startup capital - Hardware anchor prevents “hardware-optional”
+positioning that is the core competitive wedge</p>
+<p><strong>What to do instead:</strong> Partner with commodity sensor
+providers for the hardware tier. Be the software that makes any sensor
+smart.</p>
+<h3
+id="trap-2-targeting-small-family-farms-100-acres-as-primary-icp">Trap
+#2: Targeting Small Family Farms (&lt;100 Acres) as Primary ICP</h3>
+<p><strong>What it is:</strong> Marketing to small-scale subsistence or
+semi-commercial farms under 100 acres.</p>
+<p><strong>Why it’s a trap:</strong> - Willingness to pay: $0–$200/year
+— insufficient for positive unit economics at any realistic CAC -
+Technology adoption rate: &lt;5% — extremely slow conversion - Multiple
+AgTech startups globally have failed attempting this segment - Support
+burden per dollar of revenue is unsustainable</p>
+<p><strong>What to do instead:</strong> 250–1,000 acre operations in
+water-stressed regions. ROI demonstrable in Year 1 at this scale.</p>
+<h3 id="trap-3-farmer-direct-premium-saas-without-enterprise-layer">Trap
+#3: Farmer-Direct Premium SaaS Without Enterprise Layer</h3>
+<p><strong>What it is:</strong> Pure farm subscription model without the
+enterprise ESG data revenue layer.</p>
+<p><strong>Why it’s a trap:</strong> - This is exactly the Farmers Edge
+failure mode — $100M+ spent building farmer-direct SaaS before pivoting
+to enterprise - Farmer revenue alone at $149/month cannot sustain a
+venture-scale business against North American/European farmer churn
+rates - Single-sided revenue creates existential risk in bad weather
+years when churn spikes</p>
+<p><strong>What to do instead:</strong> Architect the enterprise data
+layer from day one — even if it doesn’t generate revenue until Month
+12–18. The system should be generating auditable water stewardship data
+from every farm from Day 1.</p>
+<h3
+id="trap-4-competing-in-row-crop-markets-without-irrigation-focus">Trap
+#4: Competing in Row Crop Markets Without Irrigation Focus</h3>
+<p><strong>What it is:</strong> Expanding into general farm management
+(planting schedules, yield optimization, input management) to compete
+with FieldView and similar general platforms.</p>
+<p><strong>Why it’s a trap:</strong> - FieldView has 60M+ acres enrolled
+and a massive dealer network — competing head-on requires enormous
+resources - Row crops (corn, soy) typically use rain-fed irrigation or
+low-precision center-pivot — the precision irrigation value proposition
+is weakest here - Dilutes the “irrigation specialist” positioning that
+differentiates against FieldView’s generalist approach</p>
+<p><strong>What to do instead:</strong> Own irrigation intelligence
+deeply. Be the “irrigation expert” that FieldView integrates with
+(partnership opportunity), not a full-farm management competitor.</p>
+<h3 id="trap-5-enterprise-sales-before-500k-arr">Trap #5: Enterprise
+Sales Before $500K ARR</h3>
+<p><strong>What it is:</strong> Hiring an enterprise sales team and
+pursuing Fortune 500 ESG contracts before establishing a farm user
+base.</p>
+<p><strong>Why it’s a trap:</strong> - Enterprise water stewardship
+buyers need a farm data network to buy — no farms means no enterprise
+product - Enterprise sales cycles are 6–18 months and burn cash; if farm
+ARR isn’t funding operations, enterprise pursuit creates a cash crisis -
+Premature enterprise focus diverts product attention from the farmer
+onboarding that builds the actual data asset</p>
+<p><strong>What to do instead:</strong> $500K+ farm ARR first, then hire
+enterprise sales. The farm base IS the enterprise product.</p>
+<hr />
+<h2 id="section-6-revenue-model">Section 6: Revenue Model</h2>
+<h3 id="recommended-structure-dual-revenue-freemium">Recommended
+Structure: Dual-Revenue Freemium</h3>
+<p>All three expert perspectives converge on this model with strong
+consensus.</p>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 23%" />
+<col style="width: 16%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tier</th>
+<th>Customer</th>
+<th>Price</th>
+<th>Value Proposition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Free Starter</strong></td>
+<td>Any farm size</td>
+<td>$0</td>
+<td>AI irrigation recommendations (satellite + weather), 1 field, 30-day
+history</td>
+</tr>
+<tr class="even">
+<td><strong>Farm Pro</strong></td>
+<td>100–2,000 acre farms</td>
+<td><strong>$149/month ($1,788/year)</strong></td>
+<td>Unlimited fields, IoT sensors, water savings reports, subsidy
+documentation</td>
+</tr>
+<tr class="odd">
+<td><strong>Farm Business</strong></td>
+<td>2,000+ acres / cooperatives</td>
+<td><strong>$399/month ($4,788/year)</strong></td>
+<td>Multi-farm management, API access, white-label, Scope 3 reports</td>
+</tr>
+<tr class="even">
+<td><strong>Enterprise ESG</strong></td>
+<td>Fortune 500 / CPG / Water Utilities</td>
+<td><strong>$25,000–$250,000/year</strong></td>
+<td>Watershed water conservation data, ESG reporting, custom
+integrations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pricing-logic">Pricing Logic</h3>
+<p><strong>Farm Pro at $149/month:</strong> - FieldView Plus anchors
+farmer expectations around $29–$349/year — Farm Pro is premium but
+affordable irrigation specialist - CropX (hardware + software) runs
+$500–2,000/month — Farm Pro is 3–10x cheaper with zero hardware required
+- ROI frame: A 250-acre farm spending $150K/year on water saves
+$30K/year at 20% efficiency → $1,788/year subscription pays back in 21
+days</p>
+<p><strong>Enterprise at $25K–$250K/year:</strong> - Arable’s Google and
+Amazon contracts validate this range for watershed-scale programs - SEC
+Scope 3 and CSRD compliance cost for manual reporting estimated at
+$5,000–$25,000/year per organization — platform pays for itself in
+compliance savings before any ESG brand value is counted</p>
+<h3 id="revenue-mix-target-by-year-2">Revenue Mix (Target by Year
+2)</h3>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 42%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>% Revenue</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Farm Pro subscriptions</td>
+<td>55%</td>
+<td>Volume-driven; beachhead revenue</td>
+</tr>
+<tr class="even">
+<td>Enterprise ESG licensing</td>
+<td>35%</td>
+<td>High ACV; 5–15 accounts can equal 500+ farm accounts</td>
+</tr>
+<tr class="odd">
+<td>Farm Business tier</td>
+<td>10%</td>
+<td>Cooperative and large farm segment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-behavioral-insight-from-industry-expert">Key Behavioral
+Insight from Industry Expert</h3>
+<p>Agricultural budget decisions cluster around
+<strong>October–December</strong> (post-harvest) and
+<strong>January–March</strong> (pre-season). Enterprise budgets are set
+in Q4. Selling into planting season (April–June) is extremely difficult.
+GTM calendar must align with buyer seasonality.</p>
+<hr />
+<h2 id="section-7-risks">Section 7: Risks</h2>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 14%" />
+<col style="width: 29%" />
+<col style="width: 19%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Risk</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><strong>Farmer annual churn</strong> — Without annual contracts and
+demonstrated in-season ROI, farmer churn at 25–35%/year makes unit
+economics unworkable (Farmers Edge lesson)</td>
+<td><strong>High</strong></td>
+<td><strong>High</strong></td>
+<td>Annual contracts with Water Savings Guarantee (15% reduction or full
+refund). Free tier generates habitual daily usage before paywall.
+On-season ROI visible within 30 days of onboarding.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><strong>LLM/satellite inference cost margin squeeze</strong> —
+Planet Labs API + LLM inference could compress gross margin from 82% to
+60–65% if costs rise non-linearly at scale</td>
+<td><strong>Medium</strong></td>
+<td><strong>High</strong></td>
+<td>Use lighter inference models (Claude Haiku, Llama 3 self-hosted) for
+routine recommendations; reserve frontier models for high-value edge
+cases. Negotiate Planet Labs volume pricing before 500 farms. 15%
+headroom budgeted.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><strong>Enterprise sales cycle length</strong> — Fortune 500 ESG
+procurement cycles are 6–18 months; depending on enterprise revenue
+before $500K farm ARR creates a cash crisis</td>
+<td><strong>High</strong></td>
+<td><strong>High</strong></td>
+<td>Sequence: farm SaaS first, enterprise sales team only after $500K
+ARR. Do not build enterprise sales team in Year 1. Farm revenue funds
+operations until first enterprise deal.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><strong>EQIP/subsidy channel dependency</strong> — USDA EQIP funding
+subject to policy changes (new administration, budget cuts); losing this
+near-zero CAC channel spike CAC significantly</td>
+<td><strong>Medium</strong></td>
+<td><strong>Medium</strong></td>
+<td>Cap EQIP channel at 40% of acquisition. Build dealer network in
+parallel as hedge. EU CAP provides geographic diversification.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><strong>Hardware integration complexity at scale</strong> — IoT
+sensor integration across different protocols (Modbus, RS-485,
+proprietary) could delay Phase 2 and increase COGS</td>
+<td><strong>Medium</strong></td>
+<td><strong>Medium</strong></td>
+<td>Prioritize 5–8 sensor brands covering 80% of market. Satellite-only
+MVP ensures farm revenue independent of hardware readiness.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><strong>Well-funded new entrant</strong> — A VC-funded competitor
+raises $10M+ in 2026–2027 targeting the same mid-market irrigation gap
+identified in public research</td>
+<td><strong>Medium</strong></td>
+<td><strong>High</strong></td>
+<td>Speed to market is the only mitigation. First-mover advantages in
+this market (EQIP approval, dealer relationships, anchor customer case
+studies) take 12–24 months to build. Raise seed and start now.</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><strong>Missing expert perspective: CTO tech assessment</strong> —
+This business case is produced before tech assessment (Step 7). Build
+cost, MVP timeline, and technical feasibility assumptions have not been
+validated by engineering review</td>
+<td><strong>N/A</strong></td>
+<td><strong>Medium</strong></td>
+<td>Flagged as gap. Section 13–16 (financial model) should be revised
+after CTO assessment. Assumptions in Sections 6 and 8 are
+preliminary.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="section-8-challenge-devils-advocate">Section 8: Challenge /
+Devil’s Advocate</h2>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 20%" />
+<col style="width: 46%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Thesis</th>
+<th>Counter-Argument</th>
+<th>Rebuttal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><strong>The mid-market gap is real and exploitable</strong> — All
+three experts agree that the 250–1,000 acre irrigated farm segment is
+structurally underserved.</td>
+<td>The gap may be structural for a reason: margins may be too thin, and
+CAC may be too high for this segment to support a venture-scale
+business. Farmers Edge tried and spent $100M+ proving it can’t work. The
+mid-market is “free” because it’s a money-losing segment, not an
+oversight.</td>
+<td>This is the strongest challenge and must be explicitly addressed in
+the financial model. The Business Strategy Expert’s response: the
+dual-revenue model (farm + enterprise) fixes the unit economics that
+killed Farmers Edge’s single-sided model. The key test is whether
+blended gross margin holds above 70% with enterprise revenue subsidizing
+farmer CAC. If LTV:CAC stays above 3:1 on blended basis, the model
+works. The financial model (Sections 13–16) must validate this
+assumption against conservative churn rates.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><strong>Industry Expert says “ENTER NOW” — 24–36 month
+window</strong></td>
+<td>The Competitive Strategist implicitly acknowledges that if a
+VC-backed competitor identifies the same opportunity and raises $10M+ in
+2026, the advantage window collapses. The window may already be closing
+— public reports of this gap may accelerate competitor entry. All three
+experts <em>agree</em> on the opportunity, which means it is visible.
+Visible opportunities attract capital.</td>
+<td>Genuine tension here. The window may be 12–18 months, not 24–36. The
+mitigating factor is that regulatory eligibility (EQIP approval), dealer
+relationships, and anchor customer case studies create an early-mover
+advantage that capital alone cannot buy on short timelines. But this
+makes speed the critical execution variable — the financial model should
+stress-test what happens if a funded competitor enters at Month 12
+rather than Month 24.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><strong>Satellite-first is a durable competitive moat</strong></td>
+<td>Satellite data is increasingly commoditized. Google Earth Engine
+provides free satellite access. Sentinel-2 is open-source. Any
+competitor (including CropX) can access the same satellite data. The
+“satellite-first” advantage is a first-mover advantage on a
+non-proprietary data source — it can be replicated in 3–6 months by any
+team with the engineering skill.</td>
+<td>Satellite data access is not the moat — the moat is the
+<strong>trained recommendation models, the farm data network, and the
+enterprise ESG relationships</strong> built on top of satellite data.
+Satellite access is a commodity enabling layer, not a proprietary input.
+The Competitive Strategist is partially wrong to position
+satellite-first as a “structural advantage” — it’s a cost structure
+advantage (vs. hardware-first) but not a data moat. The actual moat must
+be farm data network effects + enterprise lock-in.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><strong>The Business Strategy Expert’s unit economics (12.9:1
+LTV:CAC) are favorable</strong></td>
+<td>These unit economics assume 3% monthly churn (36% annual). Farmers
+Edge reported much higher churn in its farmer-direct SaaS phase. 3%
+monthly churn = farmer is paying for ~33 months on average — this
+requires annual contracts with very high renewal rates. If annual churn
+is actually 40–50% (as raw farmer SaaS data suggests), LTV drops from
+$3,228 to ~$1,400–$1,800, and LTV:CAC falls to 5–7:1. Still acceptable
+by SaaS benchmarks, but the margin for error shrinks significantly.</td>
+<td>All three experts acknowledge this risk. The mitigation is annual
+contracts with water savings guarantee — Business Strategy Expert
+estimates effective annual churn drops to 15–20% with annual pre-pay.
+This assumption must be validated in Year 1 before scaling. The
+financial model should run a downside scenario with 30% annual churn to
+test viability.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><strong>All three experts agree on the dual-revenue model</strong> —
+which warrants skepticism per the challenge mandate.</td>
+<td>The dual-revenue model assumption that enterprise buyers want
+mid-market farm data (not just large commercial farm data) is
+unvalidated. Google paid Arable for <strong>large commercial
+farm</strong> data in a specific Nebraska watershed. Do enterprise ESG
+buyers care about data from 250-acre California vineyards? The
+enterprise water stewardship market for mid-market farm aggregation is
+ASSUMED, not validated.</td>
+<td>This is a genuine gap. The Business Strategy Expert cites CSRD/SEC
+Scope 3 requirements as creating demand for supply chain farm data —
+this is a different enterprise buyer (supply chain managers, not
+watershed stewardship managers). These are two different enterprise
+motions with different sales cycles and buyers. The business case must
+separate these: (a) watershed stewardship programs (Arable’s model,
+geographic concentration required), and (b) supply chain Scope 3
+programs (volume of farms in supply chain required). Neither has been
+validated for mid-market farms specifically.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="section-9-build-recommendation">Section 9: Build
+Recommendation</h2>
+<h3 id="verdict-conditionally-viable">Verdict: CONDITIONALLY VIABLE</h3>
+<p>The opportunity is real, the timing is favorable, and the
+dual-revenue model has meaningful validation from Arable’s market proof.
+However, two structural risks — farmer churn economics and unvalidated
+enterprise demand for mid-market farm data — must be specifically
+addressed before the model is fully viable.</p>
+<hr />
+<h3 id="viability-adjustments">Viability Adjustments</h3>
+<p>Ranked by estimated impact on viability:</p>
+<p><strong>Adjustment 1: Annual Contracts with Water Savings Guarantee
+as Standard (Not Optional)</strong> - <strong>What to change:</strong>
+Make annual billing the default (not monthly) for Farm Pro from day 1.
+Include a “15% water savings or full refund” guarantee in the contract.
+- <strong>Why:</strong> This is the single most impactful lever on
+farmer LTV. Annual pre-pay reduces effective churn from ~36% to ~15–20%.
+LTV increase: ~$1,800 to $3,228. Unit economics are borderline at 36%
+annual churn and strong at 15–20%. - <strong>Estimated impact:</strong>
+LTV:CAC ratio from 5–7:1 (monthly billing, high churn) to 10–13:1
+(annual billing, low churn). Reduces revenue risk significantly.</p>
+<p><strong>Adjustment 2: Validate Enterprise Water Stewardship Demand
+Before Building the ESG Layer</strong> - <strong>What to
+change:</strong> Before investing in enterprise ESG features (Phase 2),
+conduct 10–15 conversations with corporate sustainability leaders at
+food/beverage CPG companies to validate whether they will pay for
+<em>mid-market farm data</em> (vs. only large commercial). Test two
+distinct enterprise motions: (a) watershed programs, (b) supply chain
+Scope 3. - <strong>Why:</strong> The dual-revenue model’s financial
+viability depends heavily on enterprise revenue ($25K–$250K ACV). If
+enterprises only want large farm data (like Arable’s Google/Amazon
+model), the mid-market farm strategy doesn’t unlock enterprise revenue —
+it just serves a smaller, harder-to-monetize market. - <strong>Estimated
+impact:</strong> Confirms or invalidates the 35% enterprise revenue
+assumption. If only supply-chain Scope 3 motion is valid, ACV may be
+lower ($5K–$50K vs. $25K–$250K), requiring 3–5x more enterprise accounts
+to hit the same revenue target. Changes financial model materially.</p>
+<p><strong>Adjustment 3: EQIP Eligibility as Launch Prerequisite, Not
+Post-Launch Goal</strong> - <strong>What to change:</strong> Begin NRCS
+EQIP approval process in Month 1, in parallel with engineering. Target
+approval by Month 6 (MVP launch). Do not wait until post-launch to
+pursue subsidy eligibility. - <strong>Why:</strong> EQIP channel
+delivers CAC of $20–80/farm vs. $250–500 for paid digital. If the
+platform launches without EQIP eligibility, the first 100 customers cost
+3–5x more to acquire, burning runway faster. - <strong>Estimated
+impact:</strong> Reduces total CAC in Year 1 by an estimated 30–40%
+assuming EQIP channel delivers 40% of farm acquisition. Extends runway
+by 2–3 months at seed stage.</p>
+<p><strong>Adjustment 4: Narrow ICP to California/Arizona Specialty
+Crops in Year 1 (Beachhead Discipline)</strong> - <strong>What to
+change:</strong> Resist the temptation to pursue global markets,
+enterprise, or multiple crop types in Year 1. Lock ICP to: specialty
+crop farms (vineyards, nut orchards, citrus) in California and Arizona,
+250–1,000 acres, SGMA-affected groundwater basins. -
+<strong>Why:</strong> This beachhead has the highest density of
+addressable farms, highest water cost sensitivity, existing SGMA
+compliance urgency, and is geographically compact for peer referral
+network effects. Spreading to India, MENA, or row crop markets in Year 1
+dilutes sales motion and delays the referral network effects that drive
+scalable adoption. - <strong>Estimated impact:</strong> Accelerates
+first 100 customers from Month 9 to Month 6–7. Reduces marketing spend
+by concentrating on a single geography and crop segment. Improves case
+study quality for enterprise pipeline.</p>
+<p><strong>Adjustment 5: Defer WhatsApp/Emerging Market Feature to Year
+2</strong> - <strong>What to change:</strong> Remove WhatsApp
+multilingual advisory from Phase 1 and Phase 2 scope. Revisit as Year 2
+feature only after US beachhead is established. - <strong>Why:</strong>
+While the emerging market opportunity is real (300M+ hectares), building
+for India/MENA/LATAM in Year 1 requires localization, local agronomic
+expertise, and different sales motions. This dilutes engineering focus
+during the critical MVP phase. The US beachhead must work first. -
+<strong>Estimated impact:</strong> Frees ~1 engineering month in Phase
+2. Keeps product focus on the ICP that generates the earliest enterprise
+ESG pipeline (US farms, CSRD-aligned supply chains).</p>
+<hr />
+<h3 id="confidence-level-medium">Confidence Level:
+<strong>Medium</strong></h3>
+<p><strong>Why Medium (not High):</strong> - The market thesis is
+well-validated by research and competitor data — confidence in the
+<em>opportunity</em> is high - The financial viability depends on two
+unvalidated assumptions: (1) farmer annual churn achievable at 15–20%
+with contracts + guarantee, (2) enterprise buyers will pay premium rates
+for mid-market farm data specifically - CTO tech assessment (Step 7) has
+not yet been completed — MVP build cost and technical feasibility are
+assumptions, not validated estimates - The Farmers Edge failure is a
+genuine cautionary tale at scale; the dual-revenue fix is logical but
+untested at the proposed price point</p>
+<p><strong>Data that would increase confidence to High:</strong> 1. 5–10
+pre-signed LOIs from mid-market California farms willing to pay
+$149/month at launch 2. 3–5 validated conversations with enterprise ESG
+buyers confirming mid-market farm data has purchase intent at $25K+ ACV
+3. CTO assessment confirming MVP buildable within $375K, 6 months, with
+3–4 engineers 4. NRCS pre-approval confirmation that EQIP eligibility
+timeline is achievable in 6–9 months</p>
+<p><strong>Data that would reduce confidence to Low / NOT
+VIABLE:</strong> - Enterprise ESG validation showing only large
+commercial farms qualify for watershed programs (mid-market farm data
+not valuable to corporate buyers) - Farmer interview data showing
+willingness to pay caps at $50–$80/month rather than $149/month - CTO
+assessment showing MVP requires 18+ months or $1M+ to build (changes
+breakeven math significantly)</p>
+<hr />
+<h3 id="final-recommendation">Final Recommendation</h3>
+<p>Proceed to seed fundraising ($1.5–2.5M) with the following sequencing
+commitments:</p>
+<ol type="1">
+<li><strong>Month 1–2:</strong> Begin EQIP approval process, conduct
+10–15 enterprise ESG buyer validation calls, start MVP engineering</li>
+<li><strong>Month 3–6:</strong> Launch MVP with free tier and Farm Pro
+at $149/month (CA/AZ specialty crops only)</li>
+<li><strong>Month 6–9:</strong> First 50 paying farms; validate annual
+churn rate with first renewal data</li>
+<li><strong>Month 9–12:</strong> First 100 paying farms; approach first
+enterprise ESG pilot</li>
+<li><strong>Month 15–18:</strong> Series A at $500K–$1M ARR if farm
+churn and enterprise validation confirm model; otherwise reassess</li>
+</ol>
+<p>The <strong>CONDITIONALLY VIABLE</strong> verdict holds until annual
+churn (Adjustment 1) and enterprise demand (Adjustment 2) are validated
+in market. If both validate positively by Month 12, upgrade to
+<strong>VIABLE</strong> and accelerate Series A timeline.</p>
+<hr />
+<p><em>Business case prepared for AgentifAI UAGIF pipeline · Step 6 of 9
+· Inputs: 3 expert analyses + research summary + 6 competitive
+analyses</em> # Technology Assessment: AI Irrigation Copilot for
+Mid-Market Farms</p>
+<p><strong>Prepared by:</strong> CTO
+(8cc44bf1-3c6c-4ef5-bace-48449fc4af9b) <strong>Date:</strong> March 29,
+2026 <strong>Pipeline Step:</strong> 7 — tech_assessment
+<strong>Inputs:</strong> business-case.md (CONDITIONALLY VIABLE
+verdict), research-summary.md, expert reports, design.md
+<strong>Iteration:</strong> 1</p>
+<hr />
+<h2 id="section-10-architecture-overview">Section 10: Architecture
+Overview</h2>
+<h3 id="system-architecture">System Architecture</h3>
+<p>The platform is structured as a cloud-native, event-driven system
+with three primary domains: <strong>Data Ingestion</strong>,
+<strong>Intelligence Engine</strong>, and <strong>Customer-Facing
+Applications</strong>. The architecture prioritizes satellite-first data
+acquisition (zero hardware at onboarding), horizontal scalability for
+farm data processing, and dual-purpose data output serving both farmer
+UX and enterprise ESG reporting.</p>
+<pre><code>+---------------------------+     +---------------------------+     +---------------------------+
+|     DATA INGESTION        |     |    INTELLIGENCE ENGINE    |     |   CUSTOMER APPLICATIONS   |
+|                           |     |                           |     |                           |
+|  Satellite Imagery API    |----&gt;|  ET Model Service         |----&gt;|  Farmer Web App (SPA)     |
+|  (Planet Labs / Sentinel) |     |  (evapotranspiration      |     |  - Farm dashboard         |
+|                           |     |   forecasting)            |     |  - Irrigation scheduler   |
+|  Weather Forecast API     |----&gt;|                           |----&gt;|  - Water savings tracker   |
+|  (OpenWeather / NOAA)     |     |  Irrigation Recommender   |     |  - Subsidy doc generator  |
+|                           |     |  (LLM-powered, crop-      |     |                           |
+|  Soil/Crop Database       |----&gt;|   specific advisory)      |----&gt;|  Enterprise ESG Portal    |
+|  (USDA SSURGO, FAO)      |     |                           |     |  - Watershed aggregation  |
+|                           |     |  Anomaly Detector         |     |  - Audit-ready reports    |
+|  IoT Sensor Gateway       |----&gt;|  (satellite NDVI drift,   |     |  - CSV/JSON/API export    |
+|  (Phase 2: MQTT/HTTP)     |     |   sensor anomalies)       |     |                           |
++---------------------------+     +---------------------------+     +---------------------------+
+          |                                   |                                   |
+          v                                   v                                   v
++-----------------------------------------------------------------------------------+
+|                           PLATFORM LAYER                                          |
+|                                                                                   |
+|  PostgreSQL (farm metadata, users, subscriptions, audit trail)                    |
+|  TimescaleDB or ClickHouse (time-series: sensor readings, satellite indices,      |
+|                              weather history, irrigation events)                   |
+|  Object Storage / S3 (satellite imagery tiles, generated reports, PDFs)           |
+|  Redis (caching: weather forecasts, recent recommendations, session state)        |
+|  Message Queue (SQS/RabbitMQ: async pipeline orchestration)                       |
+|                                                                                   |
+|  Auth: OAuth 2.0 + API keys (enterprise)                                         |
+|  Deployment: Kubernetes on AWS/GCP (multi-region for latency to farm geographies) |
+|  CI/CD: GitHub Actions, Terraform IaC                                             |
++-----------------------------------------------------------------------------------+</code></pre>
+<h3 id="key-architectural-decisions">Key Architectural Decisions</h3>
+<p><strong>ADR-1: Satellite-First, Sensor-Optional Data
+Pipeline</strong></p>
+<p>The core data pipeline ingests satellite imagery (Planet Labs API for
+commercial resolution, Sentinel-2 for free/fallback) and weather
+forecast APIs as primary inputs. No hardware dependency at any layer.
+IoT sensor data is a supplementary input added in Phase 2 via an
+MQTT/HTTP gateway. This architecture directly supports the business
+case’s “zero hardware required at onboarding” positioning and is the
+single most important technical decision — it determines cost structure,
+onboarding friction, and scalability ceiling.</p>
+<p>Rationale: CropX and Arable are architecturally bound to hardware
+data pipelines. A satellite-first architecture gives us a structural
+cost advantage (~$3-8/farm/month for satellite+weather vs. $50-150/farm
+for hardware deployment+maintenance) and removes the onboarding friction
+that limits those competitors to dealer-assisted sales.</p>
+<p><strong>ADR-2: LLM-Powered Recommendation Engine with Agronomic
+RAG</strong></p>
+<p>Irrigation recommendations are generated by an LLM (Claude Haiku /
+Llama 3 class for routine daily recommendations; Claude Sonnet for
+complex edge cases) with retrieval-augmented generation over a curated
+agronomic knowledge base. This replaces the 10+ year,
+agronomist-intensive model-building approach used by CropX.</p>
+<p>Trade-off: LLM recommendations will be less precise than CropX’s 100+
+validated crop models in Year 1. This is acceptable because: (a) the
+target ICP (250-1,000 acre farms currently using no precision
+irrigation) is upgrading from zero intelligence, not from CropX; (b)
+satellite NDVI + weather-based ET modeling provides a solid physical
+baseline that the LLM augments with crop-specific context; (c) model
+precision improves with farm feedback data over time. The LLM approach
+delivers 80% of CropX’s value at 5% of the development cost and
+timeline.</p>
+<p>Risk: LLM hallucination in agronomic context could produce harmful
+recommendations (e.g., severely under-irrigating during a critical crop
+stage). Mitigation: hard physical constraints (ET-based minimum/maximum
+irrigation bounds) enforce safety rails that override LLM output.
+Recommendations are flagged as “AI-generated” with confidence scores. A
+human agronomist reviews recommendation quality weekly for the first 6
+months.</p>
+<p><strong>ADR-3: Multi-Tenant SaaS with Enterprise Data
+Isolation</strong></p>
+<p>Single codebase serving all tiers (Free, Pro, Business, Enterprise).
+Enterprise ESG tenants get logically isolated data views with audit
+logging. No separate enterprise deployment — the same platform serves
+farmers and enterprise buyers, which is critical for the dual-revenue
+model (enterprise reports aggregate from live farmer data, not a
+separate data copy).</p>
+<p>Enterprise data requirements (auditability, data lineage, export
+compliance) are built into the core data layer from Day 1, not bolted on
+later. This is a lesson from Arable’s architecture — their enterprise
+pivot required significant re-engineering of data pipelines built for
+farmers. Building audit-grade data provenance from the start adds ~2
+weeks to MVP but saves 2-3 months of re-architecture later.</p>
+<p><strong>ADR-4: Event-Driven Processing Pipeline</strong></p>
+<p>All data ingestion and recommendation generation is asynchronous and
+event-driven. Daily satellite imagery triggers a processing pipeline:
+fetch imagery -&gt; compute NDVI/EVI -&gt; run ET model -&gt; generate
+irrigation recommendation -&gt; notify farmer. This architecture
+supports: (a) batch processing thousands of farms efficiently; (b)
+adding new data sources (sensors, drones) without changing the
+recommendation pipeline; (c) retry/replay capability for failed
+processing steps.</p>
+<p><strong>ADR-5: API-First Design</strong></p>
+<p>All functionality exposed via REST API before any UI is built. The
+farmer web app, enterprise portal, and future WhatsApp/SMS advisory
+(Phase 2) are all API consumers. This enables: (a) enterprise API access
+as a paid tier feature; (b) third-party integrations (FieldView, farm
+management systems); (c) mobile app development without backend
+changes.</p>
+<h3 id="technology-stack-recommended">Technology Stack
+(Recommended)</h3>
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 37%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Technology</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Backend API</td>
+<td>Node.js (TypeScript) or Python (FastAPI)</td>
+<td>Python preferred for ML/satellite libraries (rasterio, GDAL);
+TypeScript preferred for API-heavy services. Recommend Python for
+intelligence engine, TypeScript for API gateway.</td>
+</tr>
+<tr class="even">
+<td>Frontend</td>
+<td>React / Next.js</td>
+<td>Standard SPA with SSR for SEO (marketing pages). Map-heavy UI
+(Mapbox GL JS for farm boundary drawing, satellite overlay).</td>
+</tr>
+<tr class="odd">
+<td>Database (relational)</td>
+<td>PostgreSQL 16</td>
+<td>Farm metadata, users, subscriptions, audit trail. Mature, reliable,
+PostGIS for geospatial queries.</td>
+</tr>
+<tr class="even">
+<td>Database (time-series)</td>
+<td>TimescaleDB (PostgreSQL extension)</td>
+<td>Sensor readings, satellite indices, weather history. Keeps
+operational simplicity (single DB engine). Upgrade to ClickHouse if
+query volume exceeds 10K farms.</td>
+</tr>
+<tr class="odd">
+<td>Object Storage</td>
+<td>AWS S3 / GCP Cloud Storage</td>
+<td>Satellite imagery tiles, generated PDF reports, EQIP
+documentation.</td>
+</tr>
+<tr class="even">
+<td>Cache</td>
+<td>Redis</td>
+<td>Weather forecast caching (TTL 1hr), recent recommendations, session
+state.</td>
+</tr>
+<tr class="odd">
+<td>Message Queue</td>
+<td>AWS SQS or RabbitMQ</td>
+<td>Async pipeline orchestration. SQS for simplicity if on AWS; RabbitMQ
+if multi-cloud.</td>
+</tr>
+<tr class="even">
+<td>LLM Integration</td>
+<td>Anthropic Claude API (Haiku for daily recs, Sonnet for edge cases) +
+self-hosted Llama 3 fallback</td>
+<td>Cost optimization: Haiku at ~$0.25/1M input tokens handles 95% of
+daily recommendations. Self-hosted Llama 3 as cost ceiling
+guarantee.</td>
+</tr>
+<tr class="odd">
+<td>Satellite Data</td>
+<td>Planet Labs API (primary) + Copernicus/Sentinel-2 (free
+fallback)</td>
+<td>Planet Labs for daily commercial resolution; Sentinel-2 (free, 5-day
+revisit) as fallback and for free-tier users.</td>
+</tr>
+<tr class="even">
+<td>Weather Data</td>
+<td>Open-Meteo (free) + NOAA GFS</td>
+<td>Open-Meteo for global coverage at zero cost; NOAA for US-specific
+high-resolution forecasts.</td>
+</tr>
+<tr class="odd">
+<td>Geospatial</td>
+<td>PostGIS + GDAL + rasterio</td>
+<td>Farm boundary storage, satellite tile processing, NDVI computation.
+Standard open-source geospatial stack.</td>
+</tr>
+<tr class="even">
+<td>Infrastructure</td>
+<td>AWS (primary) or GCP</td>
+<td>Kubernetes (EKS/GKE) for container orchestration. Terraform for
+IaC.</td>
+</tr>
+<tr class="odd">
+<td>CI/CD</td>
+<td>GitHub Actions</td>
+<td>Standard. Lint, test, build, deploy pipeline.</td>
+</tr>
+<tr class="even">
+<td>Monitoring</td>
+<td>Datadog or Grafana + Prometheus</td>
+<td>Application performance, satellite API latency, LLM inference costs,
+farm data pipeline health.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="section-11-build-effort">Section 11: Build Effort</h2>
+<h3 id="team-size-and-roles">Team Size and Roles</h3>
+<p><strong>MVP Phase (Months 0-6): 4 engineers + 1 part-time agronomist
+advisor</strong></p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 17%" />
+<col style="width: 38%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Count</th>
+<th>Responsibility</th>
+<th>Seniority</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Full-Stack Lead Engineer</td>
+<td>1</td>
+<td>Architecture, API design, satellite data pipeline, deployment. Owns
+technical decisions day-to-day.</td>
+<td>Senior (7+ yr)</td>
+</tr>
+<tr class="even">
+<td>Backend/ML Engineer</td>
+<td>1</td>
+<td>LLM integration, irrigation recommendation engine, agronomic RAG
+pipeline, ET modeling.</td>
+<td>Mid-Senior (5+ yr, ML experience required)</td>
+</tr>
+<tr class="odd">
+<td>Frontend Engineer</td>
+<td>1</td>
+<td>Farmer dashboard, farm onboarding flow, map-based UI (Mapbox), water
+savings visualization.</td>
+<td>Mid (3+ yr, React + map UX experience)</td>
+</tr>
+<tr class="even">
+<td>Backend/Data Engineer</td>
+<td>1</td>
+<td>Weather API integration, time-series data pipeline, report
+generation (PDF/CSV), EQIP documentation templates.</td>
+<td>Mid (3+ yr)</td>
+</tr>
+<tr class="odd">
+<td>Agronomist Advisor (Part-time/Contract)</td>
+<td>1</td>
+<td>Validates LLM irrigation recommendations against agronomic best
+practice. Reviews crop-specific models. Quality gate on recommendation
+accuracy for first 6 months.</td>
+<td>Domain expert, not engineer. $5K-$10K/month contract.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Scale Phase (Months 7-18): Grow to 7-8 engineers +
+support</strong></p>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 25%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Count</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+ IoT/Hardware Integration Engineer</td>
+<td>1</td>
+<td>MQTT gateway, sensor brand integrations (Sentek, Decagon,
+AquaCheck), data normalization.</td>
+</tr>
+<tr class="even">
+<td>+ Enterprise Backend Engineer</td>
+<td>1</td>
+<td>Enterprise ESG reporting engine, audit trail, data export, API
+access controls, multi-tenant isolation.</td>
+</tr>
+<tr class="odd">
+<td>+ DevOps/SRE Engineer</td>
+<td>1</td>
+<td>Production operations, monitoring, scaling, cost optimization,
+security hardening.</td>
+</tr>
+<tr class="even">
+<td>+ Farmer Success / Support Engineer</td>
+<td>1</td>
+<td>Onboarding optimization, support tooling, feedback loop to
+product.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mvp-timeline-6-months">MVP Timeline: 6 Months</h3>
+<pre><code>Month 1-2: Foundation
+  - Cloud infrastructure setup (Terraform, K8s, CI/CD)
+  - PostgreSQL + TimescaleDB schema design
+  - Planet Labs API integration + Sentinel-2 fallback
+  - Weather API integration (Open-Meteo + NOAA)
+  - Authentication + user management
+  - Farm boundary drawing UI (Mapbox GL JS)
+  Deliverable: A user can sign up, draw a farm boundary, and see satellite NDVI + weather data for their farm.
+
+Month 2-3: Intelligence Engine
+  - ET model service (Penman-Monteith implementation using weather + satellite inputs)
+  - LLM-powered irrigation recommendation pipeline (Claude Haiku + agronomic RAG)
+  - Crop-specific context for top 5 crops (almonds, grapes, citrus, avocado, tomatoes)
+  - Safety rails: physical ET-based min/max bounds on LLM recommendations
+  - Daily processing pipeline (satellite fetch -&gt; NDVI -&gt; ET -&gt; recommendation -&gt; notify)
+  Deliverable: Daily AI irrigation recommendations for enrolled farms.
+
+Month 3-4: Farmer Dashboard + Water Savings
+  - Irrigation scheduler UI (daily/weekly view with AI recommendations)
+  - Water savings tracker (actual vs. recommended, gallons saved, $ saved)
+  - Farm Pro subscription + billing integration (Stripe)
+  - Free tier limitations (1 field, 30-day history)
+  Deliverable: Functional farmer product with free and paid tiers.
+
+Month 4-5: Subsidy Documentation + Reporting
+  - EQIP-compatible water use report generator (PDF)
+  - Monthly/annual water savings reports
+  - Farm onboarding polish (target: under 10 minutes from signup to first recommendation)
+  - Email notification system (daily recommendations, weekly water savings summary)
+  Deliverable: EQIP documentation feature; polished onboarding flow.
+
+Month 5-6: Enterprise Data Foundation + Launch Prep
+  - Audit-grade data provenance logging (every data point traceable to source)
+  - Enterprise API stub (read-only watershed aggregation endpoint)
+  - Load testing (target: 500 concurrent farms)
+  - Security audit (OWASP top 10, API authentication hardening)
+  - Beta launch with 10-20 California specialty crop farms
+  Deliverable: Production-ready MVP. Beta users generating real irrigation data.
+
+Month 6: Public Launch
+  - Public launch: Free + Farm Pro tiers available
+  - Landing page + self-serve onboarding live
+  - Dealer partner portal (basic: referral link tracking, commission dashboard)</code></pre>
+<h3 id="mvp-build-cost">MVP Build Cost</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>6-Month Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Engineering (4 FTEs at $120K/yr avg)</td>
+<td>$240,000</td>
+</tr>
+<tr class="even">
+<td>Agronomist advisor (contract)</td>
+<td>$30,000-$60,000</td>
+</tr>
+<tr class="odd">
+<td>Satellite API (Planet Labs, dev scale)</td>
+<td>$12,000-$30,000</td>
+</tr>
+<tr class="even">
+<td>Cloud infrastructure (dev + staging + prod)</td>
+<td>$15,000-$25,000</td>
+</tr>
+<tr class="odd">
+<td>Tools + services (GitHub, Datadog, Stripe, Mapbox)</td>
+<td>$8,000-$12,000</td>
+</tr>
+<tr class="even">
+<td><strong>Total MVP build cost</strong></td>
+<td><strong>$305,000-$367,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>This validates the business case assumption of ~$375K for 6-month MVP
+build. The estimate is tight but achievable with a focused, senior team
+executing against a well-scoped feature set.</p>
+<h3 id="complexity-rating-3-out-of-5">Complexity Rating: 3 out of 5</h3>
+<p><strong>Why 3/5 (Moderate):</strong></p>
+<p>The platform combines several technically well-understood components
+(REST APIs, PostgreSQL, React SPA, Stripe billing) with moderately
+complex domain-specific challenges:</p>
+<ul>
+<li><strong>Satellite imagery processing</strong> (NDVI computation from
+raw imagery tiles) — well-documented but requires geospatial expertise;
+libraries (rasterio, GDAL) are mature but have steep learning
+curves.</li>
+<li><strong>ET modeling</strong> (Penman-Monteith) — a solved physics
+problem with open-source implementations, but parameterization for
+specific crops and microclimates requires agronomic domain
+knowledge.</li>
+<li><strong>LLM-powered agronomic recommendations</strong> — novel
+application area; no established best practices for agricultural LLM
+RAG. Requires careful prompt engineering, safety rails, and ongoing
+quality monitoring. This is the highest-risk technical component.</li>
+<li><strong>Geospatial UI</strong> (farm boundary drawing, satellite
+overlay) — Mapbox GL JS is mature, but building a polished map-based
+onboarding experience requires dedicated frontend effort.</li>
+</ul>
+<p>What makes it <strong>not</strong> a 4 or 5: - No hardware
+development (satellite-first eliminates IoT engineering in MVP) - No
+custom ML model training (LLM + RAG replaces traditional ML pipeline) -
+No real-time control systems (recommendations are advisory, not
+actuating irrigation hardware) - Standard SaaS patterns for auth,
+billing, multi-tenancy - All external APIs (Planet Labs, weather, LLM)
+are well-documented with SDKs</p>
+<p>What could push it to 4/5 (Phase 2 risks): - IoT sensor integration
+across multiple protocols (Modbus, RS-485, proprietary) in Phase 2 -
+Enterprise audit compliance requirements if targeting regulated
+industries - Scale challenges if satellite imagery processing exceeds
+10K farms (computational cost of daily NDVI for large farm
+portfolios)</p>
+<h3 id="viability-adjustment-impact-assessment">Viability Adjustment
+Impact Assessment</h3>
+<p>The business case lists 5 viability adjustments. Here is the
+technical feasibility and build effort impact of each:</p>
+<p><strong>Adjustment 1: Annual Contracts with Water Savings
+Guarantee</strong> - Technical impact: <strong>Minimal.</strong>
+Requires water savings calculation logic in the dashboard (already
+planned for P2: Water Savings Dashboard). Guarantee enforcement requires
+a “water savings audit” feature — comparing actual irrigation data
+against baseline. Adds ~1 week of engineering to MVP scope. -
+Feasibility: <strong>High.</strong> Standard SaaS billing configuration
+(Stripe supports annual billing natively). The water savings calculation
+is a core feature regardless of guarantee.</p>
+<p><strong>Adjustment 2: Validate Enterprise ESG Demand Before
+Building</strong> - Technical impact: <strong>None on MVP.</strong> This
+is a business validation activity (customer interviews), not a technical
+build. The enterprise data foundation (audit-grade logging, API stubs)
+is already in Month 5-6 scope. Full enterprise ESG portal is Phase 2
+regardless. - Feasibility: <strong>N/A</strong> (business task, not
+engineering).</p>
+<p><strong>Adjustment 3: EQIP Eligibility as Launch
+Prerequisite</strong> - Technical impact: <strong>Low-Moderate.</strong>
+EQIP eligibility requires the platform to generate specific water use
+documentation formats that meet NRCS technical standards. This is
+already scoped as P4 (Subsidy Documentation Generator) in Month 4-5. The
+constraint is regulatory approval timeline (6-12 months from
+application), not engineering. Suggest starting NRCS application in
+Month 1 with preliminary product documentation; refine as MVP
+stabilizes. - Feasibility: <strong>High</strong> for the engineering
+component. Regulatory approval timeline is outside engineering
+control.</p>
+<p><strong>Adjustment 4: Narrow ICP to CA/AZ Specialty Crops</strong> -
+Technical impact: <strong>Positive (reduces scope).</strong> Narrowing
+to California/Arizona means: (a) single timezone for satellite imagery
+scheduling; (b) top 5 crops (almonds, grapes, citrus, avocado, tomatoes)
+cover the beachhead; (c) SGMA-specific compliance features can be
+prioritized. Reduces crop model development from 10 crops to 5 in MVP.
+Saves ~2 weeks of engineering. - Feasibility: <strong>High.</strong>
+Simplifies the MVP scope.</p>
+<p><strong>Adjustment 5: Defer WhatsApp/Emerging Markets</strong> -
+Technical impact: <strong>Positive (reduces scope).</strong> WhatsApp
+integration + multilingual LLM advisory + emerging market crop models
+would add 4-6 weeks to Phase 2 timeline. Deferring to Year 2 is the
+correct engineering decision — it avoids premature internationalization
+complexity. - Feasibility: <strong>High.</strong> No engineering
+downside to deferral.</p>
+<p><strong>Net adjustment impact on build effort:</strong> Adjustments 4
+and 5 reduce MVP scope by ~3-4 weeks. Adjustment 1 adds ~1 week.
+Adjustment 3 adds ~0.5 weeks of documentation work. Net effect:
+<strong>MVP timeline unchanged at 6 months</strong>, with slightly more
+buffer for polish and testing.</p>
+<hr />
+<h2 id="section-12-technical-risks-dependencies">Section 12: Technical
+Risks &amp; Dependencies</h2>
+<h3 id="critical-technical-risks">Critical Technical Risks</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 12%" />
+<col style="width: 23%" />
+<col style="width: 17%" />
+<col style="width: 25%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Risk</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Mitigation</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T1</td>
+<td><strong>Planet Labs API pricing at scale</strong> — Planet Labs’
+per-query pricing model may not scale linearly. At 5,000+ farms with
+daily imagery requests, API costs could exceed $15-25/farm/month,
+compressing gross margin below 70%. Planet Labs has limited public
+pricing transparency for high-volume SaaS integrators.</td>
+<td>Medium</td>
+<td>High</td>
+<td>Negotiate volume contract before 500 farms. Budget ceiling of
+$8/farm/month for satellite data. Sentinel-2 (free, 5-day revisit) as
+fallback for free-tier users and cost optimization. Pre-compute NDVI for
+geographic clusters (multiple farms in same satellite tile = single API
+call).</td>
+<td>Lead Engineer</td>
+</tr>
+<tr class="even">
+<td>T2</td>
+<td><strong>LLM recommendation quality and safety</strong> —
+LLM-generated irrigation recommendations for novel crop/climate
+combinations may be inaccurate or dangerous (e.g., recommending severe
+water reduction during heat stress). No established benchmark exists for
+agricultural LLM advisory accuracy.</td>
+<td>Medium</td>
+<td>High</td>
+<td>Hard physical safety rails (ET-based min/max bounds override any LLM
+output). Agronomist review of recommendation quality for first 6 months.
+Confidence scoring on every recommendation. “AI-generated” labeling with
+fallback to conservative defaults when confidence is low. Systematic A/B
+testing against published agronomic guidelines for each supported
+crop.</td>
+<td>ML Engineer + Agronomist</td>
+</tr>
+<tr class="odd">
+<td>T3</td>
+<td><strong>Satellite imagery availability gaps</strong> — Cloud cover,
+revisit frequency, and resolution limitations can create gaps in NDVI
+data for specific fields on specific days. In California’s Central
+Valley, winter fog can reduce usable satellite passes to 2-3 per
+week.</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Multi-source satellite fusion (Planet Labs + Sentinel-2 + Landsat).
+Temporal interpolation for missing days using last-known-good +
+weather-adjusted estimates. Set user expectations: “recommendations may
+use estimated data on cloudy days” with confidence indicator.
+Weather-based recommendations remain available regardless of satellite
+coverage.</td>
+<td>Data Engineer</td>
+</tr>
+<tr class="even">
+<td>T4</td>
+<td><strong>Geospatial processing performance at scale</strong> — Daily
+NDVI computation for 5,000+ farms (each with multiple fields) requires
+processing hundreds of satellite imagery tiles. If processing pipeline
+cannot complete within the daily window (midnight to 6am before farmer
+wakeup), recommendations are delayed.</td>
+<td>Low-Medium</td>
+<td>Medium</td>
+<td>Pre-compute geographic clusters (farms sharing satellite tiles). Use
+serverless compute (AWS Lambda / GCP Cloud Functions) for embarrassingly
+parallel tile processing. Target: 10,000 farm processing in under 2
+hours. Profile and optimize early — this becomes a scaling bottleneck
+before product-market fit is the constraint.</td>
+<td>Lead Engineer</td>
+</tr>
+<tr class="odd">
+<td>T5</td>
+<td><strong>LLM inference cost growth</strong> — If daily irrigation
+recommendations require Sonnet-class inference (not Haiku), per-farm LLM
+cost rises from ~$0.01-0.03/day to ~$0.10-0.30/day ($3-9/farm/month). At
+5,000 farms, monthly LLM cost goes from $1,500-4,500 to
+$15,000-45,000.</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Use Haiku for 95% of routine daily recommendations (standard weather
++ crop stage = predictable prompts). Reserve Sonnet for: (a)
+anomaly-triggered analysis (unusual NDVI drop, extreme weather), (b)
+first-time farm setup crop plan, (c) enterprise report generation.
+Self-hosted Llama 3 as cost ceiling guarantee for routine inference.
+Target blended LLM cost: &lt;$0.05/farm/day.</td>
+<td>ML Engineer</td>
+</tr>
+<tr class="even">
+<td>T6</td>
+<td><strong>IoT sensor integration complexity (Phase 2)</strong> — Soil
+moisture sensors from different manufacturers use different protocols
+(Modbus RTU, SDI-12, RS-485, proprietary cellular), data formats,
+calibration curves, and firmware update mechanisms. Supporting 5-8
+sensor brands may require more engineering effort than anticipated.</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Phase 2 scope (not MVP risk). Prioritize the 3 most popular brands
+in the CA/AZ beachhead first (Sentek, AquaCheck, Vegetronix). Use a
+sensor abstraction layer (normalize all sensor data to a common schema
+before it hits the recommendation engine). Partner with sensor
+manufacturers for integration documentation and test hardware. Budget 3
+months of dedicated IoT engineering effort.</td>
+<td>IoT Engineer (Phase 2 hire)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="external-dependencies">External Dependencies</h3>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 15%" />
+<col style="width: 27%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dependency</th>
+<th>Type</th>
+<th>Risk Level</th>
+<th>Contingency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Planet Labs API</strong></td>
+<td>Data source (satellite imagery)</td>
+<td>Medium</td>
+<td>Sentinel-2 (free) as degraded fallback. Maxar as alternative
+commercial provider. Multi-provider strategy from Month 6.</td>
+</tr>
+<tr class="even">
+<td><strong>Anthropic Claude API</strong></td>
+<td>LLM inference</td>
+<td>Low</td>
+<td>Self-hosted Llama 3 as fallback. OpenAI as alternative provider.
+Model-agnostic prompt templates.</td>
+</tr>
+<tr class="odd">
+<td><strong>Open-Meteo / NOAA</strong></td>
+<td>Data source (weather)</td>
+<td>Low</td>
+<td>Multiple weather providers available. NOAA is US government —
+extremely reliable. Open-Meteo is open-source with multiple data
+sources.</td>
+</tr>
+<tr class="even">
+<td><strong>Mapbox GL JS</strong></td>
+<td>Frontend mapping</td>
+<td>Low</td>
+<td>Open-source alternatives (Leaflet, OpenLayers) available but with
+less polish. Mapbox pricing is predictable at our scale.</td>
+</tr>
+<tr class="odd">
+<td><strong>Stripe</strong></td>
+<td>Payment processing</td>
+<td>Low</td>
+<td>Standard SaaS dependency. Well-documented, reliable.</td>
+</tr>
+<tr class="even">
+<td><strong>AWS / GCP</strong></td>
+<td>Cloud infrastructure</td>
+<td>Low</td>
+<td>Standard cloud provider risk. Multi-region deployment from Month 6
+for availability.</td>
+</tr>
+<tr class="odd">
+<td><strong>USDA SSURGO / FAO</strong></td>
+<td>Soil data</td>
+<td>Low</td>
+<td>Public datasets, freely available, updated annually.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="technical-debt-budget">Technical Debt Budget</h3>
+<p>The following areas will accumulate technical debt during MVP that
+must be addressed before scaling past 1,000 farms:</p>
+<ol type="1">
+<li><p><strong>Satellite tile caching and deduplication</strong> — MVP
+will re-fetch overlapping tiles for farms in the same geography. At
+scale, this wastes API budget and processing time. Needs a tile cache
+with geographic deduplication by Month 9.</p></li>
+<li><p><strong>LLM prompt management</strong> — MVP will use hardcoded
+prompts. By Month 6, crop-specific prompt templates, A/B testing
+infrastructure, and prompt version control are needed. Without this,
+recommendation quality improvement is manual and slow.</p></li>
+<li><p><strong>Monitoring and alerting</strong> — MVP launches with
+basic Datadog APM. By Month 9, needs custom dashboards for:
+recommendation quality metrics (farmer feedback on accuracy), satellite
+data pipeline health (freshness, gaps), per-farm cost tracking (LLM +
+satellite per tenant).</p></li>
+<li><p><strong>Data pipeline idempotency</strong> — MVP processing
+pipeline may re-process data on retry. At scale, needs strict
+idempotency to avoid duplicate recommendations and incorrect water
+savings calculations.</p></li>
+<li><p><strong>Enterprise data isolation testing</strong> — MVP has
+logical tenant isolation. Before first enterprise customer, needs:
+penetration testing of tenant boundaries, formal data access audit,
+compliance documentation for enterprise procurement review.</p></li>
+</ol>
+<h3 id="cto-verdict-on-technical-feasibility">CTO Verdict on Technical
+Feasibility</h3>
+<p><strong>The MVP is technically feasible within the proposed 6-month
+timeline and ~$375K budget with a team of 4 engineers + 1 agronomist
+advisor.</strong></p>
+<p>The architecture is sound: satellite-first data ingestion,
+LLM-powered recommendations with physical safety rails, and a standard
+SaaS platform layer. No single component requires novel research — the
+challenge is integrating well-understood components (satellite APIs, LLM
+inference, geospatial processing, SaaS billing) into a cohesive product
+within a tight timeline.</p>
+<p>The highest-risk technical bet is the LLM-powered agronomic
+recommendation engine (T2). If recommendation quality is poor, the
+product’s core value proposition fails regardless of how well the rest
+of the platform works. The agronomist advisor role is not optional — it
+is the quality gate that prevents shipping bad recommendations to real
+farms. Budget $30K-60K for this role in Year 1.</p>
+<p>The business case’s CONDITIONALLY VIABLE verdict is technically
+supportable. The two viability conditions — farmer churn (Adjustment 1)
+and enterprise demand validation (Adjustment 2) — are business risks,
+not technical risks. From an engineering perspective, the platform can
+be built as described. Whether farmers pay $149/month and whether
+enterprises pay $25K-250K/year are market validation questions that
+engineering cannot answer.</p>
+<p><strong>Recommendation:</strong> Proceed with MVP engineering in
+parallel with the business validation activities described in
+Adjustments 1-2. The $375K MVP investment is modest relative to the
+market opportunity, and the satellite-first architecture is the correct
+technical foundation regardless of which revenue model ultimately
+dominates.</p>
+<hr />
+<p><em>Technology assessment prepared for AgentifAI UAGIF pipeline –
+Step 7 of 9 – CTO review of business-case.md (CONDITIONALLY VIABLE) and
+prior research inputs</em> # Financial Model: AI Irrigation Copilot for
+Mid-Market Farms</p>
+<p><strong>Prepared by:</strong> Business Analyst
+(82327e75-1204-404b-89c7-a90da8455562)<br />
+<strong>Date:</strong> March 29, 2026<br />
+<strong>Pipeline Step:</strong> 8 — financial_model<br />
+<strong>Inputs:</strong> business-case.md (CONDITIONALLY VIABLE) ·
+tech-assessment.md<br />
+<strong>Iteration:</strong> 1</p>
+<hr />
+<blockquote>
+<p><strong>CONDITIONALLY VIABLE verdict → Two scenarios
+modeled:</strong> - <strong>Scenario A (As-Is):</strong> Monthly
+billing, ~36% annual churn, no enterprise revenue until Year 2, global
+ICP from launch - <strong>Scenario B (With Adjustments):</strong> Annual
+contracts + water savings guarantee, CA/AZ beachhead discipline, EQIP
+eligibility by Month 6, enterprise validation by Month 9</p>
+<p>Delta summary and recommendation appear at end of each section.</p>
+</blockquote>
+<hr />
+<h2 id="section-13-build-cost">Section 13: Build Cost</h2>
+<h3 id="engineering-team-mvp-phase-months-06">Engineering Team (MVP
+Phase — Months 0–6)</h3>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 14%" />
+<col style="width: 43%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Count</th>
+<th>Fully-Loaded Annual</th>
+<th>6-Month Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Full-Stack Lead Engineer (Senior, MENA-based)</td>
+<td>1</td>
+<td>$100,000</td>
+<td>$50,000</td>
+</tr>
+<tr class="even">
+<td>Backend/ML Engineer (Mid-Senior, MENA-based)</td>
+<td>1</td>
+<td>$90,000</td>
+<td>$45,000</td>
+</tr>
+<tr class="odd">
+<td>Frontend Engineer (Mid, MENA-based)</td>
+<td>1</td>
+<td>$80,000</td>
+<td>$40,000</td>
+</tr>
+<tr class="even">
+<td>Backend/Data Engineer (Mid, MENA-based)</td>
+<td>1</td>
+<td>$80,000</td>
+<td>$40,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Engineering subtotal</strong></td>
+<td><strong>4 FTEs</strong></td>
+<td>—</td>
+<td><strong>$175,000</strong></td>
+</tr>
+<tr class="even">
+<td>Agronomist Advisor (Part-time/Contract)</td>
+<td>1</td>
+<td>—</td>
+<td>$30,000–$60,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Engineering + Advisor Total</strong></td>
+<td></td>
+<td></td>
+<td><strong>$205,000–$235,000</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Assumption:</strong> MENA-based senior engineering team at
+$80–120K fully loaded per the benchmark table. CTO assessment used $120K
+avg/yr; model uses $80–100K average as conservative MENA estimate,
+consistent with CTO’s $240K engineering subtotal note (4 x $60K = $240K
+at $120K/yr; our MENA estimate is lower, producing $175K engineering
+labor). Both are within range — we use CTO figure as ceiling
+validation.</p>
+</blockquote>
+<h3 id="infrastructure-third-party-services-6-months">Infrastructure
+&amp; Third-Party Services (6 Months)</h3>
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 17%" />
+<col style="width: 21%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Low</th>
+<th>High</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Satellite API — Planet Labs (dev scale, ~50 test farms)</td>
+<td>$6,000</td>
+<td>$12,000</td>
+<td>~$100–200/farm/month at dev pricing; negotiate volume contract by
+Month 6</td>
+</tr>
+<tr class="even">
+<td>Satellite fallback — Sentinel-2</td>
+<td>$0</td>
+<td>$0</td>
+<td>Free open-source dataset</td>
+</tr>
+<tr class="odd">
+<td>Cloud infrastructure (AWS/GCP: dev + staging + prod)</td>
+<td>$12,000</td>
+<td>$20,000</td>
+<td>K8s cluster, TimescaleDB, S3, Redis, SQS</td>
+</tr>
+<tr class="even">
+<td>LLM inference (Anthropic Claude API, dev scale)</td>
+<td>$2,000</td>
+<td>$4,000</td>
+<td>Haiku for daily recs at ~$0.25/1M input tokens; Sonnet for
+setup/edge cases</td>
+</tr>
+<tr class="odd">
+<td>Weather API (Open-Meteo: free; NOAA: free)</td>
+<td>$0</td>
+<td>$0</td>
+<td>No cost at MVP scale</td>
+</tr>
+<tr class="even">
+<td>Mapbox GL JS</td>
+<td>$1,000</td>
+<td>$2,000</td>
+<td>Web maps tier</td>
+</tr>
+<tr class="odd">
+<td>Tools: GitHub Actions, Datadog, Stripe, Terraform</td>
+<td>$4,000</td>
+<td>$6,000</td>
+<td>Standard SaaS tooling</td>
+</tr>
+<tr class="even">
+<td>Security audit (OWASP, penetration test)</td>
+<td>$5,000</td>
+<td>$10,000</td>
+<td>Month 5–6 pre-launch</td>
+</tr>
+<tr class="odd">
+<td><strong>Infrastructure &amp; Services Total</strong></td>
+<td><strong>$30,000</strong></td>
+<td><strong>$54,000</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="total-mvp-build-cost">Total MVP Build Cost</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Low</th>
+<th>High</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Engineering labor (4 FTEs)</td>
+<td>$175,000</td>
+<td>$235,000</td>
+</tr>
+<tr class="even">
+<td>Infrastructure &amp; services</td>
+<td>$30,000</td>
+<td>$54,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Total to MVP (6 months)</strong></td>
+<td><strong>$205,000</strong></td>
+<td><strong>$289,000</strong></td>
+</tr>
+<tr class="even">
+<td>CTO validated ceiling</td>
+<td>—</td>
+<td><strong>$367,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Model uses: $305,000 midpoint</strong> (within CTO’s
+$305K–$367K range). The $375K business case assumption remains valid.
+Budget $25K–$50K buffer for unknowns.</p>
+<blockquote>
+<p><strong>Scenario A vs. B — Build cost delta: None.</strong> Both
+scenarios share the same MVP build. Adjustment 4 (narrow ICP to CA/AZ)
+actually reduces MVP scope by ~3–4 weeks per the CTO assessment, and
+Adjustment 5 (defer WhatsApp) adds ~1 week of buffer — no net change in
+timeline or budget. Build cost is scenario-agnostic.</p>
+</blockquote>
+<hr />
+<h2 id="section-14-operating-costs-per-user-month">Section 14: Operating
+Costs (Per User / Month)</h2>
+<p>All costs expressed as cost to serve one paying Farm Pro subscriber
+($149/month).</p>
+<h3 id="per-farm-monthly-cost-breakdown">Per-Farm Monthly Cost
+Breakdown</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 18%" />
+<col style="width: 31%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cost Category</th>
+<th>Model/Source</th>
+<th>Est. Tokens or Units</th>
+<th>$/Farm/Month</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>LLM — Daily recommendations</strong></td>
+<td>Claude Haiku (95% of calls)</td>
+<td>~50K input + 5K output/farm/month</td>
+<td>$0.015</td>
+<td>$0.25/1M input; $1.25/1M output; 50K×$0.25/1M = $0.013; 5K×$1.25/1M
+= $0.006</td>
+</tr>
+<tr class="even">
+<td><strong>LLM — Edge cases / setup</strong></td>
+<td>Claude Sonnet (5% of calls)</td>
+<td>~5K input + 2K output/farm/month</td>
+<td>$0.045</td>
+<td>$3.00/1M input; $15.00/1M output; blended across farm base</td>
+</tr>
+<tr class="odd">
+<td><strong>LLM total</strong></td>
+<td>Blended Haiku + Sonnet</td>
+<td>—</td>
+<td><strong>$0.06</strong></td>
+<td>Conservative; self-hosted Llama 3 as cost ceiling</td>
+</tr>
+<tr class="even">
+<td><strong>Satellite data</strong></td>
+<td>Planet Labs (commercial)</td>
+<td>1 farm boundary tile/day avg</td>
+<td>$3.00–$8.00</td>
+<td>~$100–$200/farm/year at startup pricing; target $3–5 post-volume
+deal</td>
+</tr>
+<tr class="odd">
+<td><strong>Satellite data</strong></td>
+<td>Sentinel-2 (free fallback)</td>
+<td>—</td>
+<td>$0</td>
+<td>Free-tier and cost optimization</td>
+</tr>
+<tr class="even">
+<td><strong>Blended satellite cost</strong> (50% farms on Planet Labs,
+50% on Sentinel-2 fallback for routine)</td>
+<td>—</td>
+<td>—</td>
+<td><strong>$1.50–$4.00</strong></td>
+<td>Mid: $2.75/farm/month</td>
+</tr>
+<tr class="odd">
+<td><strong>Cloud hosting</strong></td>
+<td>AWS/GCP compute, DB, storage</td>
+<td>Time-series + API + batch processing</td>
+<td>$0.80–$1.50</td>
+<td>Based on $12–18K/month for 1,000 farms = $12–18/farm/month at 1K;
+scales down with volume</td>
+</tr>
+<tr class="even">
+<td><strong>Cloud at scale</strong> (5,000 farms, fixed infra
+amortized)</td>
+<td>—</td>
+<td>—</td>
+<td><strong>$0.80</strong></td>
+<td>Use $0.80 at 1K+ farms</td>
+</tr>
+<tr class="odd">
+<td><strong>Customer support</strong></td>
+<td>1 support agent per 300 farms</td>
+<td>$60K/yr fully-loaded</td>
+<td>$1.67</td>
+<td>1/300 farms × $60K/12 = $16.67 … corrected: $60K/yr ÷ 300 farms =
+$200/farm/yr = $16.67/farm/month → at $149/month this is 11% of revenue,
+too high; assume 1 support agent per 500 farms</td>
+</tr>
+<tr class="even">
+<td><strong>Customer support (revised)</strong></td>
+<td>1 agent per 500 farms</td>
+<td>$50K/yr MENA-based support</td>
+<td><strong>$0.83</strong></td>
+<td>$50K ÷ 500 ÷ 12 = $8.33/farm/month → still high; with self-serve and
+FAQs, target 1 agent per 800 farms</td>
+</tr>
+<tr class="odd">
+<td><strong>Customer support (target)</strong></td>
+<td>1 agent per 800 farms</td>
+<td>$50K/yr</td>
+<td><strong>$0.52</strong></td>
+<td>$50K ÷ 800 ÷ 12 = $5.21/farm/month; use $5/farm/month</td>
+</tr>
+<tr class="even">
+<td><strong>Customer support</strong></td>
+<td></td>
+<td></td>
+<td><strong>$5.00</strong></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Payment processing</strong></td>
+<td>Stripe</td>
+<td>2.9% + $0.30 per transaction</td>
+<td><strong>$4.62</strong></td>
+<td>2.9% × $149 + $0.30; monthly billing. Annual billing reduces this:
+2.9% × $1,788 / 12 = $4.32/month equiv</td>
+</tr>
+<tr class="even">
+<td><strong>Sales &amp; marketing</strong></td>
+<td>Blended CAC amortized</td>
+<td>12-month payback target</td>
+<td>—</td>
+<td>Captured in CAC/LTV section; not per-unit operating cost</td>
+</tr>
+<tr class="odd">
+<td><strong>Total COGS per farm/month</strong></td>
+<td></td>
+<td></td>
+<td><strong>~$13.97</strong></td>
+<td>Using midpoints</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cogs-summary-per-farmmonth">COGS Summary (Per Farm/Month)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>$/Farm/Month</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LLM inference (blended)</td>
+<td>$0.06</td>
+</tr>
+<tr class="even">
+<td>Satellite data (blended)</td>
+<td>$2.75</td>
+</tr>
+<tr class="odd">
+<td>Cloud infrastructure</td>
+<td>$0.80</td>
+</tr>
+<tr class="even">
+<td>Customer support</td>
+<td>$5.00</td>
+</tr>
+<tr class="odd">
+<td>Payment processing</td>
+<td>$4.62</td>
+</tr>
+<tr class="even">
+<td><strong>Total COGS</strong></td>
+<td><strong>$13.23</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Revenue (Farm Pro)</strong></td>
+<td><strong>$149.00</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Gross Profit per Farm</strong></td>
+<td><strong>$135.77</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Gross Margin</strong></td>
+<td><strong>91.1%</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note on gross margin:</strong> This is an early-scale
+estimate (under 1,000 farms). The margin looks high because support
+costs are volume-amortized and satellite costs use Sentinel-2 blending.
+At Planet Labs full commercial pricing across all farms, satellite cost
+alone could reach $8/farm/month, compressing margin to 83%. We use 82%
+as the conservative planning assumption, consistent with the business
+case (which assumed 82%).</p>
+</blockquote>
+<p><strong>Conservative gross margin assumption: 82%</strong> (Planet
+Labs full commercial pricing, before volume discounts).</p>
+<h3 id="enterprise-esg-cost-to-serve">Enterprise ESG Cost to Serve</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>$/Account/Month</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Enterprise engineering support (0.25 FTE)</td>
+<td>$2,000</td>
+</tr>
+<tr class="even">
+<td>Data storage &amp; compute (watershed aggregation)</td>
+<td>$500–$1,000</td>
+</tr>
+<tr class="odd">
+<td>Legal / compliance (contract review)</td>
+<td>$200–$500</td>
+</tr>
+<tr class="even">
+<td><strong>Total enterprise COGS</strong></td>
+<td><strong>$2,700–$3,500/month</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Revenue at $75K/year ACV midpoint</strong></td>
+<td><strong>$6,250/month</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Enterprise gross margin</strong></td>
+<td><strong>~56–57%</strong> blended with farm</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Enterprise gross margin is lower than farm margin due to dedicated
+engineering support and compliance costs. This is expected and
+acceptable — enterprise accounts generate 50–200x more revenue than
+individual farms.</p>
+</blockquote>
+<hr />
+<h2 id="section-15-unit-economics">Section 15: Unit Economics</h2>
+<h3 id="scenario-a-as-is-monthly-billing-no-adjustments">Scenario A —
+As-Is (Monthly Billing, No Adjustments)</h3>
+<p><strong>Assumptions:</strong> - Monthly billing only: $149/month -
+Annual churn: 36% (3%/month, industry average for non-contracted SMB
+SaaS) - CAC channel: paid digital (Facebook/Google Ag, trade
+publications) — no EQIP subsidy - No enterprise revenue until Year 2
+(farm ARR first) - Blended gross margin: 82%</p>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 25%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+<th>Calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ARPU</strong></td>
+<td>$149/month</td>
+<td>Farm Pro list price</td>
+</tr>
+<tr class="even">
+<td><strong>Gross margin</strong></td>
+<td>82%</td>
+<td>Conservative (CTO validated)</td>
+</tr>
+<tr class="odd">
+<td><strong>Monthly churn</strong></td>
+<td>3.0%</td>
+<td>Standard SMB SaaS; no annual contract</td>
+</tr>
+<tr class="even">
+<td><strong>LTV</strong></td>
+<td>$4,067</td>
+<td>($149 × 82%) / 3% = $122.18 / 0.03</td>
+</tr>
+<tr class="odd">
+<td><strong>CAC</strong></td>
+<td>$400</td>
+<td>Paid digital: Facebook/Google Ag leads, ~$400 blended (mid SMB range
+$200–$500)</td>
+</tr>
+<tr class="even">
+<td><strong>LTV:CAC</strong></td>
+<td><strong>10.2:1</strong></td>
+<td>$4,067 / $400</td>
+</tr>
+<tr class="odd">
+<td><strong>Payback period</strong></td>
+<td>3.3 months</td>
+<td>$400 / ($149 × 82%)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>LTV:CAC looks strong at 10:1, but this masks the churn problem: a 3%
+monthly churn means the median farmer churns after 23 months. If actual
+annual churn is 40–50% (Farmers Edge’s experience), monthly churn =
+4.1%, LTV = $2,975, LTV:CAC = 7.4:1 — still above 3:1 threshold but
+breakeven slides.</p>
+</blockquote>
+<p><strong>Downside scenario (40% annual churn, monthly
+billing):</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Monthly churn</td>
+<td>4.1%</td>
+</tr>
+<tr class="even">
+<td>LTV</td>
+<td>$2,975</td>
+</tr>
+<tr class="odd">
+<td>LTV:CAC</td>
+<td>7.4:1</td>
+</tr>
+<tr class="even">
+<td>Payback</td>
+<td>3.3 months</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="scenario-b-with-adjustments-annual-billing-eqip-beachhead">Scenario
+B — With Adjustments (Annual Billing, EQIP, Beachhead)</h3>
+<p><strong>Assumptions:</strong> - Annual billing default: $1,788/year
+(no monthly option in Year 1) - Effective annual churn: 18% (Water
+Savings Guarantee + annual lock-in; per business case estimate of
+15–20%) - Effective monthly churn: 1.5% - CAC channel: 40%
+EQIP/government subsidy ($20–80/farm), 30% dealer referral
+($100–200/farm), 30% paid digital ($400/farm) - Blended CAC: (0.4 × $50)
++ (0.3 × $150) + (0.3 × $400) = $20 + $45 + $120 = <strong>$185</strong>
+- Gross margin: 82%</p>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 25%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+<th>Calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ARPU</strong></td>
+<td>$149/month ($1,788/year)</td>
+<td>Annual billing, same list price</td>
+</tr>
+<tr class="even">
+<td><strong>Gross margin</strong></td>
+<td>82%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Monthly churn</strong></td>
+<td>1.5%</td>
+<td>Effective with annual contracts + guarantee</td>
+</tr>
+<tr class="even">
+<td><strong>LTV</strong></td>
+<td>$8,133</td>
+<td>($149 × 82%) / 1.5% = $122.18 / 0.015</td>
+</tr>
+<tr class="odd">
+<td><strong>CAC</strong></td>
+<td>$185</td>
+<td>Blended: EQIP + dealer + digital</td>
+</tr>
+<tr class="even">
+<td><strong>LTV:CAC</strong></td>
+<td><strong>44:1</strong></td>
+<td>$8,133 / $185</td>
+</tr>
+<tr class="odd">
+<td><strong>Payback period</strong></td>
+<td>1.5 months</td>
+<td>$185 / ($149 × 82%)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>LTV:CAC of 44:1 is excellent</strong> but reflects an
+optimistic EQIP blended CAC. More conservative: if EQIP only delivers
+20% of acquisition (not 40%), blended CAC rises to $250. LTV:CAC = 32:1
+— still exceptional.</p>
+</blockquote>
+<p><strong>Conservative Scenario B (20% EQIP penetration, 20% annual
+churn):</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Monthly churn</td>
+<td>1.7%</td>
+</tr>
+<tr class="even">
+<td>LTV</td>
+<td>$7,187</td>
+</tr>
+<tr class="odd">
+<td>Blended CAC</td>
+<td>$250</td>
+</tr>
+<tr class="even">
+<td>LTV:CAC</td>
+<td>28.8:1</td>
+</tr>
+<tr class="odd">
+<td>Payback</td>
+<td>2.0 months</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scenario-a-vs.-b-delta-summary-unit-economics">Scenario A vs. B
+Delta Summary — Unit Economics</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Scenario A</th>
+<th>Scenario B</th>
+<th>Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Monthly churn</td>
+<td>3.0%</td>
+<td>1.5%</td>
+<td>-50%</td>
+</tr>
+<tr class="even">
+<td>LTV</td>
+<td>$4,067</td>
+<td>$8,133</td>
+<td><strong>+$4,066 (+100%)</strong></td>
+</tr>
+<tr class="odd">
+<td>CAC</td>
+<td>$400</td>
+<td>$185</td>
+<td><strong>-$215 (-54%)</strong></td>
+</tr>
+<tr class="even">
+<td>LTV:CAC</td>
+<td>10.2:1</td>
+<td>44:1</td>
+<td><strong>+4.3x</strong></td>
+</tr>
+<tr class="odd">
+<td>Payback</td>
+<td>3.3 months</td>
+<td>1.5 months</td>
+<td><strong>-1.8 months</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The adjustments (annual billing + EQIP + guarantee) double LTV and
+halve CAC simultaneously — a 4x improvement in LTV:CAC. This is the most
+impactful lever in the entire model.</p>
+<hr />
+<h2 id="section-16-3-year-pl-projection">Section 16: 3-Year P&amp;L
+Projection</h2>
+<h3 id="key-assumptions-both-scenarios">Key Assumptions (Both
+Scenarios)</h3>
+<p><strong>Pricing:</strong> - Farm Pro: $149/month ($1,788/year) - Farm
+Business: $399/month ($4,788/year) — available from Month 12 -
+Enterprise ESG: $75,000/year ACV (midpoint of $25K–$250K range;
+conservative for first contracts)</p>
+<p><strong>Team growth:</strong> - Year 1: 4 engineers + 1 agronomist
+advisor (MVP phase) → grows to 7 engineers by Month 18 - Year 2: 10
+total (7 eng + 2 sales/CS + 1 product); enterprise sales hire at $500K
+ARR - Year 3: 15 total (10 eng + 3 sales/CS + 1 product + 1
+marketing)</p>
+<p><strong>Fully loaded annual cost per person:</strong> - Engineering
+(MENA): $90K/yr average - Sales/CS (MENA): $70K/yr average -
+Product/Marketing (MENA): $80K/yr average</p>
+<p><strong>Infrastructure scaling:</strong> - Year 1: $20K–$30K (MVP
+infra, sub-500 farms) - Year 2: $60K–$90K (1,000–3,000 farms, scaled
+K8s) - Year 3: $150K–$200K (5,000–10,000 farms)</p>
+<hr />
+<h3
+id="scenario-a-as-is-monthly-billing-no-beachhead-discipline">Scenario
+A: As-Is (Monthly Billing, No Beachhead Discipline)</h3>
+<p><strong>User growth assumptions:</strong> - No EQIP channel → paid
+digital only → slower early growth - Monthly churn 3% → significant
+leakage offsets new acquisition - No enterprise until Year 2 (farm ARR
+priority) - Month 6 launch; 10 beta farms → 25 paying farms by end of
+Year 1 - Year 1 end: 150 Farm Pro + 5 Farm Business - Year 2 end: 600
+Farm Pro + 25 Farm Business + 3 Enterprise - Year 3 end: 1,800 Farm Pro
++ 70 Farm Business + 8 Enterprise</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Year 1</th>
+<th>Year 2</th>
+<th>Year 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Farm Pro users (EOP)</strong></td>
+<td>150</td>
+<td>600</td>
+<td>1,800</td>
+</tr>
+<tr class="even">
+<td><strong>Farm Business users (EOP)</strong></td>
+<td>5</td>
+<td>25</td>
+<td>70</td>
+</tr>
+<tr class="odd">
+<td><strong>Enterprise accounts (EOP)</strong></td>
+<td>0</td>
+<td>3</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td><strong>Avg Farm Pro users (for revenue)</strong></td>
+<td>75</td>
+<td>375</td>
+<td>1,200</td>
+</tr>
+<tr class="odd">
+<td><strong>Avg Farm Business users</strong></td>
+<td>2</td>
+<td>15</td>
+<td>47</td>
+</tr>
+<tr class="even">
+<td><strong>Farm Pro revenue</strong></td>
+<td>$134,100</td>
+<td>$671,250</td>
+<td>$2,149,200</td>
+</tr>
+<tr class="odd">
+<td><strong>Farm Business revenue</strong></td>
+<td>$9,576</td>
+<td>$86,184</td>
+<td>$269,424</td>
+</tr>
+<tr class="even">
+<td><strong>Enterprise revenue</strong></td>
+<td>$0</td>
+<td>$225,000</td>
+<td>$600,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Total Revenue</strong></td>
+<td><strong>$143,676</strong></td>
+<td><strong>$982,434</strong></td>
+<td><strong>$3,018,624</strong></td>
+</tr>
+<tr class="even">
+<td><strong>COGS (farm: 18% of farm rev; enterprise: 44% of ent
+rev)</strong></td>
+<td>$26,580</td>
+<td>$209,474</td>
+<td>$551,030</td>
+</tr>
+<tr class="odd">
+<td><strong>Gross Profit</strong></td>
+<td>$117,096</td>
+<td>$772,960</td>
+<td>$2,467,594</td>
+</tr>
+<tr class="even">
+<td><strong>Gross Margin</strong></td>
+<td>81.5%</td>
+<td>78.7%</td>
+<td>81.7%</td>
+</tr>
+<tr class="odd">
+<td><strong>Engineering payroll</strong></td>
+<td>$450,000</td>
+<td>$900,000</td>
+<td>$1,350,000</td>
+</tr>
+<tr class="even">
+<td><strong>Sales &amp; Marketing</strong></td>
+<td>$80,000</td>
+<td>$200,000</td>
+<td>$400,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Infrastructure</strong></td>
+<td>$25,000</td>
+<td>$75,000</td>
+<td>$175,000</td>
+</tr>
+<tr class="even">
+<td><strong>G&amp;A (legal, finance, tools)</strong></td>
+<td>$40,000</td>
+<td>$60,000</td>
+<td>$80,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Total OpEx</strong></td>
+<td>$595,000</td>
+<td>$1,235,000</td>
+<td>$2,005,000</td>
+</tr>
+<tr class="even">
+<td><strong>Net Income</strong></td>
+<td><strong>-$477,904</strong></td>
+<td><strong>-$462,040</strong></td>
+<td><strong>+$462,594</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Net Margin</strong></td>
+<td><strong>-332%</strong></td>
+<td><strong>-47%</strong></td>
+<td><strong>+15%</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Cumulative Cash Burn</strong></td>
+<td>$477,904</td>
+<td>$939,944</td>
+<td>$477,350 net</td>
+</tr>
+<tr class="odd">
+<td><strong>Monthly Burn Rate</strong></td>
+<td>~$39,800</td>
+<td>~$38,500</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Scenario A Breakeven:</strong> Q3 Year 3 (~Month 32)</p>
+<p><strong>Total funding required (Scenario A):</strong> ~$950K–$1.1M
+(seed + bridge) to reach breakeven</p>
+<hr />
+<h3
+id="scenario-b-with-adjustments-annual-contracts-eqip-caaz-beachhead">Scenario
+B: With Adjustments (Annual Contracts, EQIP, CA/AZ Beachhead)</h3>
+<p><strong>User growth assumptions:</strong> - EQIP eligibility by Month
+6 → 40% of acquisition at $50 blended CAC - Annual billing + guarantee →
+18% annual churn (1.5%/month) - CA/AZ beachhead → first 100 farms
+concentrated geographically → faster peer referral - Month 6 launch; 50
+beta (free) → 40 paying farms by Month 7 - Year 1 end: 220 Farm Pro + 8
+Farm Business (faster ramp with EQIP + beachhead) - Year 2 end: 900 Farm
+Pro + 40 Farm Business + 5 Enterprise - Year 3 end: 2,800 Farm Pro + 110
+Farm Business + 14 Enterprise</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Year 1</th>
+<th>Year 2</th>
+<th>Year 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Farm Pro users (EOP)</strong></td>
+<td>220</td>
+<td>900</td>
+<td>2,800</td>
+</tr>
+<tr class="even">
+<td><strong>Farm Business users (EOP)</strong></td>
+<td>8</td>
+<td>40</td>
+<td>110</td>
+</tr>
+<tr class="odd">
+<td><strong>Enterprise accounts (EOP)</strong></td>
+<td>0</td>
+<td>5</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td><strong>Avg Farm Pro users (for revenue)</strong></td>
+<td>110</td>
+<td>560</td>
+<td>1,850</td>
+</tr>
+<tr class="odd">
+<td><strong>Avg Farm Business users</strong></td>
+<td>4</td>
+<td>24</td>
+<td>75</td>
+</tr>
+<tr class="even">
+<td><strong>Farm Pro revenue</strong></td>
+<td>$196,680</td>
+<td>$1,001,520</td>
+<td>$3,309,300</td>
+</tr>
+<tr class="odd">
+<td><strong>Farm Business revenue</strong></td>
+<td>$22,944</td>
+<td>$137,894</td>
+<td>$430,920</td>
+</tr>
+<tr class="even">
+<td><strong>Enterprise revenue</strong></td>
+<td>$0</td>
+<td>$375,000</td>
+<td>$1,050,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Total Revenue</strong></td>
+<td><strong>$219,624</strong></td>
+<td><strong>$1,514,414</strong></td>
+<td><strong>$4,790,220</strong></td>
+</tr>
+<tr class="even">
+<td><strong>COGS (farm 18% of farm rev; enterprise 44% of ent
+rev)</strong></td>
+<td>$39,866</td>
+<td>$331,143</td>
+<td>$890,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Gross Profit</strong></td>
+<td>$179,758</td>
+<td>$1,183,271</td>
+<td>$3,900,220</td>
+</tr>
+<tr class="even">
+<td><strong>Gross Margin</strong></td>
+<td>81.9%</td>
+<td>78.1%</td>
+<td>81.4%</td>
+</tr>
+<tr class="odd">
+<td><strong>Engineering payroll</strong></td>
+<td>$450,000</td>
+<td>$900,000</td>
+<td>$1,350,000</td>
+</tr>
+<tr class="even">
+<td><strong>Sales &amp; Marketing</strong></td>
+<td>$50,000</td>
+<td>$175,000</td>
+<td>$350,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Infrastructure</strong></td>
+<td>$25,000</td>
+<td>$75,000</td>
+<td>$175,000</td>
+</tr>
+<tr class="even">
+<td><strong>G&amp;A (legal, finance, tools)</strong></td>
+<td>$40,000</td>
+<td>$60,000</td>
+<td>$80,000</td>
+</tr>
+<tr class="odd">
+<td><strong>Total OpEx</strong></td>
+<td>$565,000</td>
+<td>$1,210,000</td>
+<td>$1,955,000</td>
+</tr>
+<tr class="even">
+<td><strong>Net Income</strong></td>
+<td><strong>-$385,242</strong></td>
+<td><strong>-$26,729</strong></td>
+<td><strong>+$1,945,220</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Net Margin</strong></td>
+<td><strong>-175%</strong></td>
+<td><strong>-1.8%</strong></td>
+<td><strong>+40.6%</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Cumulative Cash Burn</strong></td>
+<td>$385,242</td>
+<td>$411,971</td>
+<td>net positive</td>
+</tr>
+<tr class="odd">
+<td><strong>Monthly Burn Rate</strong></td>
+<td>~$32,100</td>
+<td>~$2,200</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Scenario B Breakeven:</strong> Late Year 2 / Early Year 3
+(~Month 23–24)</p>
+<p><strong>Total funding required (Scenario B):</strong> ~$450K–$550K
+(seed only) to reach breakeven</p>
+<hr />
+<h3 id="scenario-a-vs.-b-delta-summary-full-pl-comparison">Scenario A
+vs. B Delta Summary — Full P&amp;L Comparison</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 29%" />
+<col style="width: 29%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Scenario A</th>
+<th>Scenario B</th>
+<th>Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Year 1 Revenue</td>
+<td>$143,676</td>
+<td>$219,624</td>
+<td>+$75,948 (+53%)</td>
+</tr>
+<tr class="even">
+<td>Year 2 Revenue</td>
+<td>$982,434</td>
+<td>$1,514,414</td>
+<td>+$531,980 (+54%)</td>
+</tr>
+<tr class="odd">
+<td>Year 3 Revenue</td>
+<td>$3,018,624</td>
+<td>$4,790,220</td>
+<td>+$1,771,596 (+59%)</td>
+</tr>
+<tr class="even">
+<td>Year 2 Net Income</td>
+<td>-$462,040</td>
+<td>-$26,729</td>
+<td><strong>+$435,311 better</strong></td>
+</tr>
+<tr class="odd">
+<td>Year 3 Net Income</td>
+<td>+$462,594</td>
+<td>+$1,945,220</td>
+<td><strong>+$1,482,626 better</strong></td>
+</tr>
+<tr class="even">
+<td>Total funding needed</td>
+<td>~$1.0–1.1M</td>
+<td>~$450–550K</td>
+<td><strong>-$550K less capital</strong></td>
+</tr>
+<tr class="odd">
+<td>Breakeven month</td>
+<td>~32</td>
+<td>~23–24</td>
+<td><strong>9 months earlier</strong></td>
+</tr>
+<tr class="even">
+<td>Year 3 net margin</td>
+<td>15%</td>
+<td>40.6%</td>
+<td><strong>+25.6 pts</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The adjusted plan (Scenario B) reaches breakeven 9 months
+earlier, requires $550K less external capital, and generates $1.5M more
+net income in Year 3.</strong> The annual contract structure and EQIP
+channel are not incremental improvements — they are the structural
+difference between a marginal business and a strong one.</p>
+<hr />
+<h3 id="key-financial-assumptions-sensitivities">Key Financial
+Assumptions &amp; Sensitivities</h3>
+<h4 id="revenue-assumptions">Revenue Assumptions</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Assumption</th>
+<th>Conservative</th>
+<th>Base (Used)</th>
+<th>Optimistic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Farm Pro ARPU</td>
+<td>$129/month</td>
+<td>$149/month</td>
+<td>$179/month</td>
+</tr>
+<tr class="even">
+<td>Farm Pro annual churn (Scenario A)</td>
+<td>40%</td>
+<td>36%</td>
+<td>28%</td>
+</tr>
+<tr class="odd">
+<td>Farm Pro annual churn (Scenario B)</td>
+<td>25%</td>
+<td>18%</td>
+<td>12%</td>
+</tr>
+<tr class="even">
+<td>Enterprise ACV</td>
+<td>$50,000</td>
+<td>$75,000</td>
+<td>$125,000</td>
+</tr>
+<tr class="odd">
+<td>Enterprise sales cycle</td>
+<td>12 months</td>
+<td>9 months</td>
+<td>6 months</td>
+</tr>
+<tr class="even">
+<td>EQIP channel % of acquisition</td>
+<td>20%</td>
+<td>40%</td>
+<td>60%</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cost-assumptions">Cost Assumptions</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Assumption</th>
+<th>Conservative</th>
+<th>Base (Used)</th>
+<th>Optimistic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Satellite cost/farm/month</td>
+<td>$8.00</td>
+<td>$2.75</td>
+<td>$1.50</td>
+</tr>
+<tr class="even">
+<td>LLM cost/farm/month</td>
+<td>$0.15</td>
+<td>$0.06</td>
+<td>$0.03</td>
+</tr>
+<tr class="odd">
+<td>Blended CAC (Scenario B)</td>
+<td>$250</td>
+<td>$185</td>
+<td>$120</td>
+</tr>
+<tr class="even">
+<td>Engineering fully-loaded (avg, MENA)</td>
+<td>$100K/yr</td>
+<td>$90K/yr</td>
+<td>$80K/yr</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sensitivity-llm-cost-escalation">Sensitivity: LLM Cost
+Escalation</h4>
+<p>If Haiku is insufficient and 30% of recommendations require Sonnet
+(not 5%), monthly LLM cost per farm rises from $0.06 to ~$0.18. At 2,000
+farms, this adds $2,880/month ($34,560/year) — material but not
+existential. At 10,000 farms: $172,800/year. <strong>Monitor LLM cost
+per farm as a KPI from Month 1.</strong> Trigger: &gt;$0.10/farm/month =
+investigate model optimization.</p>
+<h4 id="sensitivity-planet-labs-pricing">Sensitivity: Planet Labs
+Pricing</h4>
+<p>At full commercial pricing ($8/farm/month, no volume discount) across
+all farms, COGS rises by $5.25/farm/month (vs. blended $2.75 base). At
+2,000 farms: +$10,500/month, +$126,000/year. Gross margin drops from 82%
+to 75%. <strong>Negotiate Planet Labs volume pricing before 500
+farms.</strong> Sentinel-2 blending keeps the floor at $2.75
+regardless.</p>
+<hr />
+<h3 id="funding-recommendation">Funding Recommendation</h3>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 18%" />
+<col style="width: 34%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Raise</th>
+<th>Use of Funds</th>
+<th>Runway</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Scenario A (As-Is)</strong></td>
+<td>Seed: $1.0–1.5M</td>
+<td>$305K MVP + $695K operating (18 months)</td>
+<td>15 months to $1M ARR required for Series A</td>
+</tr>
+<tr class="even">
+<td><strong>Scenario B (Adjusted)</strong></td>
+<td>Seed: $600–900K</td>
+<td>$305K MVP + $295K operating (12 months)</td>
+<td>Reaches near-breakeven by Month 24; Series A optional</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended raise: $750K–$1M seed</strong>, structured as
+Scenario B execution. This: 1. Covers MVP build ($305K) with buffer 2.
+Funds 12–15 months of operations before farm ARR becomes self-sustaining
+3. Does not require a Series A if Scenario B validates (breakeven by
+Month 24) 4. Leaves optionality to raise a growth Series A at $1M+ ARR
+for enterprise sales acceleration</p>
+<hr />
+<h3 id="year-financial-summary-scenario-b-recommended">3-Year Financial
+Summary (Scenario B — Recommended)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Year 1</th>
+<th>Year 2</th>
+<th>Year 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Farm Pro Farms</td>
+<td>220</td>
+<td>900</td>
+<td>2,800</td>
+</tr>
+<tr class="even">
+<td>Enterprise Accounts</td>
+<td>0</td>
+<td>5</td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>Total Revenue</td>
+<td>$219,624</td>
+<td>$1,514,414</td>
+<td>$4,790,220</td>
+</tr>
+<tr class="even">
+<td>COGS</td>
+<td>$39,866</td>
+<td>$331,143</td>
+<td>$890,000</td>
+</tr>
+<tr class="odd">
+<td>Gross Margin</td>
+<td>81.9%</td>
+<td>78.1%</td>
+<td>81.4%</td>
+</tr>
+<tr class="even">
+<td>Total OpEx</td>
+<td>$565,000</td>
+<td>$1,210,000</td>
+<td>$1,955,000</td>
+</tr>
+<tr class="odd">
+<td>Net Income</td>
+<td>-$385,242</td>
+<td>-$26,729</td>
+<td>+$1,945,220</td>
+</tr>
+<tr class="even">
+<td>Net Margin</td>
+<td>-175%</td>
+<td>-1.8%</td>
+<td>+40.6%</td>
+</tr>
+<tr class="odd">
+<td>Cumulative Burn</td>
+<td>$385,242</td>
+<td>$411,971</td>
+<td>Net positive</td>
+</tr>
+<tr class="even">
+<td><strong>Breakeven</strong></td>
+<td></td>
+<td><strong>~Month 23</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Financial model prepared for AgentifAI UAGIF pipeline · Step 8 of
+9 · Inputs: business-case.md (CONDITIONALLY VIABLE) +
+tech-assessment.md</em></p>
+<a href="#" class="back-to-top">↑ Top</a>
+</body>
+</html>
