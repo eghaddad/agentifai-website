@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>DinoLand Kids — Business Case</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  code{white-space: pre-wrap;}
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #1a1a1a;
+    background: #f9f9f9;
+  }
+  h1 { color: #1a1a1a; border-bottom: 3px solid #2563eb; padding-bottom: 0.5rem; font-size: 1.8rem; }
+  h2 { color: #1e40af; margin-top: 2.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.25rem; }
+  h3 { color: #1d4ed8; margin-top: 1.5rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.9em; }
+  th, td { border: 1px solid #d1d5db; padding: 0.5rem 0.75rem; text-align: left; }
+  th { background-color: #eff6ff; font-weight: 600; color: #1e40af; }
+  tr:nth-child(even) { background-color: #f8fafc; }
+  code { background: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 3px; font-family: Monaco, Consolas, monospace; font-size: 0.85em; }
+  pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+  pre code { background: none; color: inherit; padding: 0; }
+  blockquote { border-left: 4px solid #2563eb; margin: 0; padding: 0.5rem 1rem; background: #eff6ff; color: #1e40af; }
+  p { margin: 0.75rem 0; }
+  ul, ol { padding-left: 1.5rem; }
+  li { margin: 0.25rem 0; }
+  strong { color: #111827; }
+  .verdict { background: #fefce8; border: 2px solid #ca8a04; border-radius: 8px; padding: 1rem 1.5rem; margin: 1.5rem 0; font-weight: 600; color: #713f12; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">DinoLand Kids — Business Case</h1>
+</header>
+<h1
+id="business-case-dinoland-kids-educational-dinosaur-platform">Business
+Case: DinoLand Kids — Educational Dinosaur Platform</h1>
+<p><strong>Product:</strong> DinoLand Kids — Web + iOS + Android<br />
+<strong>Model:</strong> Freemium Subscription<br />
+<strong>Target:</strong> Ages 4–10, English-speaking markets<br />
+<strong>Date:</strong> 2026-05-02<br />
+<strong>Issue:</strong> AGE-2714<br />
+<strong>Prepared by:</strong> AgentifAI Expert Council</p>
+<hr />
+<h2 id="executive-summary">Executive Summary</h2>
+<table>
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Recommendation</strong></td>
+<td><strong>CONDITIONALLY VIABLE — PROCEED with conditions</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Confidence</strong></td>
+<td>Medium-High</td>
+</tr>
+<tr class="odd">
+<td><strong>Build Cost (all-in)</strong></td>
+<td>$478K–$518K</td>
+</tr>
+<tr class="even">
+<td><strong>Funding Required</strong></td>
+<td>$700K–$750K (floor); $800K–$850K (recommended)</td>
+</tr>
+<tr class="odd">
+<td><strong>Build Duration</strong></td>
+<td>10–12 months</td>
+</tr>
+<tr class="even">
+<td><strong>Team</strong></td>
+<td>3 FTE engineers + 1 part-time design contractor</td>
+</tr>
+<tr class="odd">
+<td><strong>3-Year Revenue</strong></td>
+<td>$1,491,000</td>
+</tr>
+<tr class="even">
+<td><strong>3-Year EBIT</strong></td>
+<td>($720,830) — turns positive Year 4</td>
+</tr>
+<tr class="odd">
+<td><strong>Operating Breakeven</strong></td>
+<td>Month 15 post-launch (~7,500 subscribers)</td>
+</tr>
+<tr class="even">
+<td><strong>LTV:CAC Year 1</strong></td>
+<td>2.6:1</td>
+</tr>
+<tr class="odd">
+<td><strong>Gross Margin</strong></td>
+<td>80%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="viability-verdict-conditionally-viable">Viability Verdict:
+CONDITIONALLY VIABLE</h3>
+<p>The product is commercially sound with three conditions:</p>
+<ol type="1">
+<li><strong>Raise $800K+</strong> (not $400K) — the intake estimate was
+$350K build; all-in is $478K–$518K and the business needs 18–24 months
+of operating runway</li>
+<li><strong>COPPA-first architecture at Week 1</strong> — retrofitting
+costs $50K–$150K; this is a non-negotiable design constraint, not a
+feature</li>
+<li><strong>Family plan + age 9–12 content by Year 2</strong> — Year 2
+LTV:CAC drops to 1.7:1 without churn reduction measures; family plan and
+expanded content window are the mitigation</li>
+</ol>
+<p>The structural advantage is real: 500K warm social followers at $5–10
+CAC, cleared competitive field (Tappity abandoned, PBS Dinosaur Train in
+decline), and infrastructure maturity (Flutter + RevenueCat + Supabase)
+that makes a $350K engineering build possible in 2026 where it would
+have cost $750K–$1M in 2022.</p>
+<p><strong>Top 3 adjustments required for GO:</strong> - Raise
+$800K–$850K (not $400K–$500K) - Execute COPPA architecture review in
+Week 1–2, before any integration decision - Validate social conversion
+with $25K landing page gate before committing full build</p>
+<hr />
+<h2 id="part-1-business-strategy">Part 1: Business Strategy</h2>
+<h3 id="section-1-revenue-model">Section 1: Revenue Model</h3>
+<p><strong>Recommended model: Freemium subscription with annual anchor
+and web-direct upsell</strong></p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 26%" />
+<col style="width: 39%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Monthly ARPU</th>
+<th>Annual LTV (est.)</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>One-time IAP ($4.99)</td>
+<td>N/A</td>
+<td>$4.99</td>
+<td>Rejected — no recurring revenue, caps LTV</td>
+</tr>
+<tr class="even">
+<td>Monthly subscription only</td>
+<td>$7.99</td>
+<td>$60–100</td>
+<td>Acceptable but annual conversion improves cash flow</td>
+</tr>
+<tr class="odd">
+<td><strong>Freemium + annual-first subscription</strong></td>
+<td><strong>$4.17 blended</strong></td>
+<td><strong>$115–125</strong></td>
+<td><strong>Recommended</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pricing tiers:</strong> - <strong>Free tier:</strong> Core
+2–3 activities, 1 dino species, no offline access - <strong>Monthly
+plan:</strong> $7.99/month (in-app) - <strong>Annual plan:</strong>
+$49.99/year — primary offer - <strong>Web direct annual:</strong>
+$44.99/year (circumvents App Store commission entirely) - <strong>Family
+upgrade (Year 2 roadmap):</strong> $59.99/year for up to 3 child
+profiles</p>
+<p><strong>Positioning vs. competitors:</strong> ABCmouse at
+$14.99/month ($45/year); Dinosaur Games at $6.99–9.99/month. DinoLand at
+$49.99/year positions above the template competitor (justified by
+content depth) and well below ABCmouse.</p>
+<p><strong>Free trial structure:</strong> Opt-in 14-day free trial (no
+card required). Target trial-to-paid conversion: 20%.</p>
+<hr />
+<h3 id="section-2-unit-economics">Section 2: Unit Economics</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Year 1</th>
+<th>Year 2</th>
+<th>Year 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Blended LTV</td>
+<td>$89.66</td>
+<td>$92.40</td>
+<td>$95.72</td>
+</tr>
+<tr class="even">
+<td>Blended CAC</td>
+<td>$35</td>
+<td>$55</td>
+<td>$45</td>
+</tr>
+<tr class="odd">
+<td><strong>LTV:CAC</strong></td>
+<td><strong>2.6:1</strong></td>
+<td><strong>1.7:1</strong></td>
+<td><strong>2.1:1</strong></td>
+</tr>
+<tr class="even">
+<td>Gross Margin</td>
+<td>80%</td>
+<td>80%</td>
+<td>80%</td>
+</tr>
+<tr class="odd">
+<td>Unit Payback</td>
+<td>8.75 months</td>
+<td>13.75 months</td>
+<td>10.8 months</td>
+</tr>
+</tbody>
+</table>
+<p><strong>LTV calculation:</strong> - Annual subscriber (in-app):
+$49.99 × 78% net / 40% annual churn = <strong>$97.50 LTV</strong> -
+Annual subscriber (web direct): $44.99 / 40% = <strong>$112.50
+LTV</strong> - Monthly subscriber: $7.99 × 78% / 8% monthly churn =
+<strong>$77.90 LTV</strong> - Blended (60% annual, 40% monthly):
+<strong>$89.66 LTV</strong></p>
+<p><strong>Year 2 LTV:CAC warning:</strong> 1.7:1 is below investor
+threshold (3:1). The mitigation is reducing annual churn from 40% to
+30–35% via family plans and 9–12 content expansion. If churn falls to
+30%, LTV rises to $123, bringing LTV:CAC to 2.2:1.</p>
+<hr />
+<h3 id="section-3-go-to-market-strategy">Section 3: Go-to-Market
+Strategy</h3>
+<p><strong>First 100 customers: Days 1–30</strong></p>
+<p>Sales motion: Self-serve. Zero sales calls. Parents discover, trial,
+and convert within minutes.</p>
+<ul>
+<li><strong>Day 0–14:</strong> Announce to 500K social followers with
+14-day free trial; early-bird $39.99/year pricing for first 30 days.
+Target: 5,000 app downloads → 20% trial conversion = 1,000 paid
+subscribers in Month 1.</li>
+<li><strong>Day 15–30:</strong> Seed first reviews; submit App Store
+Kids Category editorial pitch; Facebook parent community
+placements.</li>
+</ul>
+<p><strong>Channel ranking:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Channel</th>
+<th>CAC</th>
+<th>Yield (Year 1)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Owned social (500K followers)</td>
+<td>$5–10</td>
+<td>500–1,000 paid</td>
+</tr>
+<tr class="even">
+<td>App Store organic (ASO)</td>
+<td>$20–40</td>
+<td>200–400 paid</td>
+</tr>
+<tr class="odd">
+<td>Parent communities</td>
+<td>$15–25</td>
+<td>50–100 paid</td>
+</tr>
+<tr class="even">
+<td>Paid social (begin Month 3)</td>
+<td>$75–120</td>
+<td>100–200 paid</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Path to 1,000 subscribers:</strong> Month 1–6, blended
+sources → 750–1,500 paid subscribers.</p>
+<hr />
+<h3 id="section-4-business-model-risks">Section 4: Business Model
+Risks</h3>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 30%" />
+<col style="width: 22%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Risk</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LLM/AI cost margin compression</td>
+<td>High if AI added</td>
+<td>HIGH</td>
+<td>Build adaptive features rule-based first; set 65% gross margin floor
+before LLM at scale</td>
+</tr>
+<tr class="even">
+<td>App Store dependency (73% iOS revenue)</td>
+<td>Medium</td>
+<td>HIGH</td>
+<td>Target 30% web-direct subscriptions within 24 months</td>
+</tr>
+<tr class="odd">
+<td>Age-out churn (40%/year)</td>
+<td>Medium</td>
+<td>MEDIUM</td>
+<td>Expand content to ages 4–12 by Year 2; family plans</td>
+</tr>
+<tr class="even">
+<td>COPPA compliance cost overrun</td>
+<td>Medium</td>
+<td>MEDIUM</td>
+<td>Minimize SDK surface; allocate $40K+ compliance budget</td>
+</tr>
+<tr class="odd">
+<td>Content production cadence</td>
+<td>Medium</td>
+<td>MEDIUM</td>
+<td>Allocate 20% ongoing OpEx ($3–5K/month) to content</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="section-5-funding-assessment">Section 5: Funding Assessment</h3>
+<p><strong>Build Phase (Pre-Launch, ~11 months)</strong> - All-in build
+cost: $478K–$518K - Monthly burn: ~$41,300/month</p>
+<p><strong>Recommended raise: $800K–$850K</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Capital Allocation</th>
+<th>Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Validation gate</td>
+<td>$25,000</td>
+</tr>
+<tr class="even">
+<td>Build (engineering + compliance + design + tools)</td>
+<td>$453,000</td>
+</tr>
+<tr class="odd">
+<td>Year 1 operating buffer</td>
+<td>$150,000</td>
+</tr>
+<tr class="even">
+<td>Emergency contingency</td>
+<td>$72,000</td>
+</tr>
+<tr class="odd">
+<td>Additional runway buffer</td>
+<td>$100,000</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>$800,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>At $700K: cash runs out in Year 2. At $800K–$850K: comfortable runway
+through Year 3 without additional capital.</p>
+<hr />
+<h3 id="section-6-business-model-timing">Section 6: Business Model
+Timing</h3>
+<p>Three factors make the economics work in 2026 that didn’t work in
+2022:</p>
+<ol type="1">
+<li><strong>Subscription infrastructure maturity:</strong> RevenueCat,
+Superwall, and App Store subscription tools cost $200–500/month in 2026
+vs. $50K–$100K in custom engineering in 2022.</li>
+<li><strong>Cross-platform cost collapse:</strong> Flutter reduced
+multi-platform build cost from $800K–$1.2M (native) to $350K
+engineering.</li>
+<li><strong>Creator-to-product CAC economics:</strong> Social-to-App
+Store conversion path is 3–4 taps in 2026 vs. 7–10 taps in 2022. Lower
+friction = higher conversion = lower effective CAC.</li>
+</ol>
+<p>The $350K engineering build at $35 CAC with 2.6:1 LTV:CAC is a
+2026-specific opportunity.</p>
+<hr />
+<h2 id="part-2-technical-assessment">Part 2: Technical Assessment</h2>
+<h3 id="section-7-architecture-overview">Section 7: Architecture
+Overview</h3>
+<p><strong>Recommended Technology Stack</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 33%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Service</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cross-platform framework</td>
+<td>Flutter</td>
+<td>Single Dart codebase for iOS, Android, Web; superior rendering for
+animations; offline mode via Hive/Isar</td>
+</tr>
+<tr class="even">
+<td>Auth + user management</td>
+<td>Supabase Auth</td>
+<td>COPPA-safe; row-level security for parental/child separation</td>
+</tr>
+<tr class="odd">
+<td>Database + storage</td>
+<td>Supabase (Postgres + Storage)</td>
+<td>Progress tracking, child profiles, parental dashboard</td>
+</tr>
+<tr class="even">
+<td>Content CMS</td>
+<td>Sanity.io</td>
+<td>Structured content model for 20–30 deep dino profiles;
+CDN-backed</td>
+</tr>
+<tr class="odd">
+<td>Subscription billing</td>
+<td>RevenueCat</td>
+<td>Unified App Store + Play Store + Stripe; trial management; receipt
+validation</td>
+</tr>
+<tr class="even">
+<td>Analytics</td>
+<td>Plausible Analytics</td>
+<td>COPPA-compliant — no personal data, no cookies, no persistent device
+IDs</td>
+</tr>
+<tr class="odd">
+<td>CDN + media delivery</td>
+<td>Cloudflare R2 + CDN</td>
+<td>Low-cost egress vs. S3</td>
+</tr>
+<tr class="even">
+<td>Push notifications</td>
+<td>Firebase Cloud Messaging</td>
+<td>Parent notifications only — NOT sent to child accounts</td>
+</tr>
+</tbody>
+</table>
+<p><strong>COPPA-First Architecture Constraints</strong>
+(non-negotiable):</p>
+<ol type="1">
+<li>No persistent device identifiers on child accounts (session tokens
+only)</li>
+<li>Parental email-verified consent before any child data
+collection</li>
+<li>Zero third-party ad SDKs — Apple Kids Category and COPPA both
+prohibit behavioral advertising</li>
+<li>Data minimization: collect only child age-range, progress data,
+subscription status</li>
+<li>Parental dashboard as first-class feature: view activity, delete
+data, manage subscription, set time limits</li>
+</ol>
+<pre><code>[Flutter App — iOS / Android / Web]
+        │
+        ├── Supabase Auth (parental consent gate, JWT sessions)
+        ├── Supabase DB (progress, profiles, entitlements cache)
+        ├── Sanity CMS (dinosaur content, curriculum metadata)
+        ├── RevenueCat SDK (subscription state, entitlements)
+        ├── Cloudflare CDN (media assets, offline bundle prefetch)
+        └── Plausible (anonymous pageview / session analytics)</code></pre>
+<p><strong>Offline Mode:</strong> On subscription activation, prefetch
+content bundle for 5 starter dinos. Progress syncs to Supabase on
+reconnect with optimistic local writes.</p>
+<hr />
+<h3 id="section-8-build-effort">Section 8: Build Effort</h3>
+<p><strong>Team composition:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Type</th>
+<th>Monthly Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tech Lead / Flutter Architect</td>
+<td>Senior contractor</td>
+<td>$12,500</td>
+</tr>
+<tr class="even">
+<td>Flutter Developer (mobile-primary)</td>
+<td>Mid-senior contractor</td>
+<td>$10,000</td>
+</tr>
+<tr class="odd">
+<td>Backend / DevOps Engineer</td>
+<td>Mid contractor</td>
+<td>$9,500</td>
+</tr>
+<tr class="even">
+<td>UX/UI Designer</td>
+<td>Part-time contract</td>
+<td>$2,300</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Timeline: 10–12 months to MVP</strong></p>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 33%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Phase</th>
+<th>Duration</th>
+<th>Deliverables</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Architecture &amp; Setup</td>
+<td>Weeks 1–6</td>
+<td>Flutter project; Supabase schema; RevenueCat; COPPA consent flow;
+CI/CD</td>
+</tr>
+<tr class="even">
+<td>Core App — Free Tier</td>
+<td>Weeks 7–16</td>
+<td>Parental consent gate; child profiles; 5 starter dinos; learning
+mechanics; offline prefetch</td>
+</tr>
+<tr class="odd">
+<td>Subscription + Billing</td>
+<td>Weeks 17–22</td>
+<td>RevenueCat integration (3 platforms); 14-day trial; annual plan; web
+billing portal</td>
+</tr>
+<tr class="even">
+<td>Content Expansion</td>
+<td>Weeks 23–34</td>
+<td>20–30 dino profiles in Sanity CMS; full offline library; NGSS
+curriculum tagging</td>
+</tr>
+<tr class="odd">
+<td>Compliance Audit + Polish</td>
+<td>Weeks 35–40</td>
+<td>COPPA audit; App Store Kids Category submission; GDPR-K DPAs;
+accessibility</td>
+</tr>
+<tr class="even">
+<td>Soft Launch + App Store</td>
+<td>Weeks 41–44</td>
+<td>TestFlight; compliance certification; App Store + Play Store
+submission</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Build Complexity: 4/5</strong> — well-defined problem with
+proven tooling, but COPPA + multi-platform + offline + subscription
+billing creates non-trivial integration surface.</p>
+<p><strong>Budget validation:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Line Item</th>
+<th>Estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Engineering (3 FTE × $10.7K blended × 11 months)</td>
+<td>$363,000</td>
+</tr>
+<tr class="even">
+<td>Design contractor</td>
+<td>$25,000</td>
+</tr>
+<tr class="odd">
+<td>SaaS tools (12 months)</td>
+<td>$8,000</td>
+</tr>
+<tr class="even">
+<td>COPPA compliance audit</td>
+<td>$40,000</td>
+</tr>
+<tr class="odd">
+<td>COPPA legal counsel</td>
+<td>$15,000</td>
+</tr>
+<tr class="even">
+<td>App Store / Play Store fees</td>
+<td>$2,000</td>
+</tr>
+<tr class="odd">
+<td>Validation gate</td>
+<td>$25,000</td>
+</tr>
+<tr class="even">
+<td><strong>Total to MVP</strong></td>
+<td><strong>$478,000</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="section-9-technical-risks">Section 9: Technical Risks</h3>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 30%" />
+<col style="width: 22%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Risk</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>COPPA 2025 compliance scope creep</td>
+<td>Medium-High</td>
+<td>HIGH</td>
+<td>COPPA architecture review at Week 2; minimize SDK surface; budget
+$40K minimum</td>
+</tr>
+<tr class="even">
+<td>Apple Kids Category rejection</td>
+<td>Medium</td>
+<td>HIGH</td>
+<td>Pre-submission compliance checklist at Week 10; all SDKs must pass
+Kids Category rules before integration</td>
+</tr>
+<tr class="odd">
+<td>Flutter Web subscription conversion</td>
+<td>Medium</td>
+<td>MEDIUM</td>
+<td>Web checkout = standard HTML/Stripe-hosted page, not Flutter
+canvas</td>
+</tr>
+<tr class="even">
+<td>Offline sync conflict</td>
+<td>Medium</td>
+<td>MEDIUM</td>
+<td>Last-write-wins with server-side timestamps from Week 1</td>
+</tr>
+<tr class="odd">
+<td>RevenueCat billing edge cases</td>
+<td>Medium</td>
+<td>MEDIUM</td>
+<td>3–4 weeks billing edge case testing; in-app restore purchases
+flow</td>
+</tr>
+<tr class="even">
+<td>Single Flutter tech lead dependency</td>
+<td>Medium</td>
+<td>HIGH</td>
+<td>Code review discipline; ADR documentation; Flutter review
+contract</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical external dependencies:</strong> - Apple Kids
+Category approval (no appeal; rejection adds 4–8 weeks) - Google Play
+Designed for Families approval - COPPA legal counsel (cannot
+self-certify; required before launch)</p>
+<p><strong>CTO verdict:</strong> PROCEED, conditional on $500K raise
+(preferably $550K for engineering only) and COPPA architecture review at
+Week 1. Note: financial model revises raise to $700K–$850K all-in
+including operations.</p>
+<hr />
+<h2 id="part-3-financial-model">Part 3: Financial Model</h2>
+<h3 id="section-10-build-cost">Section 10: Build Cost</h3>
+<p><strong>Full Build Cost Breakdown:</strong></p>
+<table>
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Line Item</th>
+<th>Estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Engineering (3 FTE × $10.7K blended × 11 months)</td>
+<td>$363,000</td>
+</tr>
+<tr class="even">
+<td>Design contractor (part-time, deliverables-based)</td>
+<td>$25,000</td>
+</tr>
+<tr class="odd">
+<td>SaaS tools (Sanity, Supabase, RevenueCat, Plausible — 12
+months)</td>
+<td>$8,000</td>
+</tr>
+<tr class="even">
+<td>COPPA compliance audit (third-party)</td>
+<td>$40,000</td>
+</tr>
+<tr class="odd">
+<td>COPPA legal counsel</td>
+<td>$15,000</td>
+</tr>
+<tr class="even">
+<td>App Store / Play Store setup</td>
+<td>$2,000</td>
+</tr>
+<tr class="odd">
+<td>Validation gate</td>
+<td>$25,000</td>
+</tr>
+<tr class="even">
+<td><strong>Total to MVP</strong></td>
+<td><strong>$478,000</strong></td>
+</tr>
+<tr class="odd">
+<td>Content production during build ($4K/month × 10 months)</td>
+<td>$40,000</td>
+</tr>
+<tr class="even">
+<td><strong>Total including content</strong></td>
+<td><strong>$518,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Monthly burn during build: <strong>$41,300/month</strong></p>
+<p><strong>Capital requirement: Raise $700K–$750K (floor), $800K–$850K
+(recommended)</strong></p>
+<hr />
+<h3 id="section-11-operating-costs-per-usermonth">Section 11: Operating
+Costs Per User/Month</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Year 1</th>
+<th>Year 2</th>
+<th>Year 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Infrastructure</td>
+<td>$0.13</td>
+<td>$0.13</td>
+<td>$0.13</td>
+</tr>
+<tr class="even">
+<td>App Store commission</td>
+<td>$1.25</td>
+<td>$1.05</td>
+<td>$0.85</td>
+</tr>
+<tr class="odd">
+<td>Content production</td>
+<td>$1.40</td>
+<td>$0.50</td>
+<td>$0.32</td>
+</tr>
+<tr class="even">
+<td>COPPA/compliance</td>
+<td>$1.09</td>
+<td>$0.22</td>
+<td>$0.17</td>
+</tr>
+<tr class="odd">
+<td>Customer support</td>
+<td>$1.17</td>
+<td>$1.17</td>
+<td>$1.17</td>
+</tr>
+<tr class="even">
+<td><strong>Total per user/month</strong></td>
+<td><strong>$5.04</strong></td>
+<td><strong>$3.07</strong></td>
+<td><strong>$2.64</strong></td>
+</tr>
+<tr class="odd">
+<td>ARPU</td>
+<td>$5.00</td>
+<td>$5.00</td>
+<td>$5.20</td>
+</tr>
+<tr class="even">
+<td><strong>Net contribution</strong></td>
+<td><strong>($0.04)</strong></td>
+<td><strong>$1.93</strong></td>
+<td><strong>$2.56</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Year 1 per-user contribution is near zero because COPPA ($37K) and
+content production ($48K) are front-loaded. At 5,000+ subscribers,
+per-user economics become strongly positive.</p>
+<p><strong>App Store commission blended rate by year:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Channel</th>
+<th>Year 1 Mix</th>
+<th>Year 2 Mix</th>
+<th>Year 3 Mix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>App Store (15–30%)</td>
+<td>55%</td>
+<td>45%</td>
+<td>35%</td>
+</tr>
+<tr class="even">
+<td>Google Play (15–30%)</td>
+<td>25%</td>
+<td>22%</td>
+<td>20%</td>
+</tr>
+<tr class="odd">
+<td>Web-direct (2.9%)</td>
+<td>20%</td>
+<td>33%</td>
+<td>45%</td>
+</tr>
+<tr class="even">
+<td><strong>Blended rate</strong></td>
+<td><strong>~25%</strong></td>
+<td><strong>~21%</strong></td>
+<td><strong>~17%</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="section-12-unit-economics-detail">Section 12: Unit Economics
+Detail</h3>
+<p><strong>Subscriber tier analysis:</strong></p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 18%" />
+<col style="width: 32%" />
+<col style="width: 18%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Plan</th>
+<th>Price</th>
+<th>Net Revenue</th>
+<th>Churn</th>
+<th>LTV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Annual in-app</td>
+<td>$49.99/year</td>
+<td>$39.00 (78% net)</td>
+<td>40%/year</td>
+<td><strong>$97.50</strong></td>
+</tr>
+<tr class="even">
+<td>Annual web-direct</td>
+<td>$44.99/year</td>
+<td>$43.64 (97% net)</td>
+<td>40%/year</td>
+<td><strong>$109.10</strong></td>
+</tr>
+<tr class="odd">
+<td>Monthly</td>
+<td>$7.99/month</td>
+<td>$6.23/month (78% net)</td>
+<td>8%/month</td>
+<td><strong>$77.90</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Blended LTV by year:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Mix</th>
+<th>Year 1</th>
+<th>Year 2</th>
+<th>Year 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Annual in-app</td>
+<td>65%</td>
+<td>55%</td>
+<td>40%</td>
+</tr>
+<tr class="even">
+<td>Annual web-direct</td>
+<td>5%</td>
+<td>15%</td>
+<td>30%</td>
+</tr>
+<tr class="odd">
+<td>Monthly</td>
+<td>30%</td>
+<td>30%</td>
+<td>30%</td>
+</tr>
+<tr class="even">
+<td><strong>Blended LTV</strong></td>
+<td><strong>$89.66</strong></td>
+<td><strong>$92.40</strong></td>
+<td><strong>$95.72</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>CAC by channel:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Channel</th>
+<th>CAC</th>
+<th>Year 1 Mix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Owned social</td>
+<td>$5–10</td>
+<td>60%</td>
+</tr>
+<tr class="even">
+<td>Organic ASO</td>
+<td>$20–40</td>
+<td>20%</td>
+</tr>
+<tr class="odd">
+<td>Parent communities</td>
+<td>$15–25</td>
+<td>10%</td>
+</tr>
+<tr class="even">
+<td>Paid social</td>
+<td>$75–120</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td><strong>Blended CAC Year 1</strong></td>
+<td><strong>$35</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="section-13-3-year-pl-projection">Section 13: 3-Year P&amp;L
+Projection</h3>
+<p><strong>Subscriber growth model:</strong></p>
+<table>
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 40%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Milestone</th>
+<th>Subscribers</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Launch (Month 0)</td>
+<td>1,000</td>
+<td>500K followers × 0.5% conversion × 20% trial-to-paid</td>
+</tr>
+<tr class="even">
+<td>Month 6</td>
+<td>1,749</td>
+<td>15% MoM growth</td>
+</tr>
+<tr class="odd">
+<td>Month 12 (Year 1 end)</td>
+<td>4,700</td>
+<td>ASO compounding</td>
+</tr>
+<tr class="even">
+<td>Month 18 (breakeven)</td>
+<td>7,500</td>
+<td>Operating cash flow positive</td>
+</tr>
+<tr class="odd">
+<td>Month 24 (Year 2 end)</td>
+<td>10,600</td>
+<td>7% MoM; family plan</td>
+</tr>
+<tr class="even">
+<td>Month 36 (Year 3 end)</td>
+<td>17,000</td>
+<td>4% MoM; approaching 20K SOM</td>
+</tr>
+</tbody>
+</table>
+<p>Average subscribers: Year 1: <strong>2,850</strong> · Year 2:
+<strong>7,650</strong> · Year 3: <strong>13,800</strong></p>
+<p><strong>Revenue:</strong></p>
+<table>
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Year 1</th>
+<th>Year 2</th>
+<th>Year 3</th>
+<th>3-Year Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Average subscribers</td>
+<td>2,850</td>
+<td>7,650</td>
+<td>13,800</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Blended ARPU</td>
+<td>$5.00</td>
+<td>$5.00</td>
+<td>$5.20</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Revenue</strong></td>
+<td><strong>$171,000</strong></td>
+<td><strong>$459,000</strong></td>
+<td><strong>$861,000</strong></td>
+<td><strong>$1,491,000</strong></td>
+</tr>
+<tr class="even">
+<td>YoY Growth</td>
+<td>—</td>
+<td>+168%</td>
+<td>+88%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>3-Year P&amp;L:</strong></p>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Year 1</th>
+<th>Year 2</th>
+<th>Year 3</th>
+<th>3-Year Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Revenue</td>
+<td>$171,000</td>
+<td>$459,000</td>
+<td>$861,000</td>
+<td><strong>$1,491,000</strong></td>
+</tr>
+<tr class="even">
+<td>COGS (20%)</td>
+<td>$34,200</td>
+<td>$91,800</td>
+<td>$172,200</td>
+<td>$298,200</td>
+</tr>
+<tr class="odd">
+<td><strong>Gross Profit</strong></td>
+<td><strong>$136,800</strong></td>
+<td><strong>$367,200</strong></td>
+<td><strong>$688,800</strong></td>
+<td><strong>$1,192,800</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Gross Margin</strong></td>
+<td>80%</td>
+<td>80%</td>
+<td>80%</td>
+<td>80%</td>
+</tr>
+<tr class="odd">
+<td>Total OpEx</td>
+<td>$420,550</td>
+<td>$626,900</td>
+<td>$866,180</td>
+<td>$1,913,630</td>
+</tr>
+<tr class="even">
+<td><strong>EBIT</strong></td>
+<td><strong>($283,750)</strong></td>
+<td><strong>($259,700)</strong></td>
+<td><strong>($177,380)</strong></td>
+<td><strong>($720,830)</strong></td>
+</tr>
+<tr class="odd">
+<td>Net Margin</td>
+<td>-166%</td>
+<td>-57%</td>
+<td>-21%</td>
+<td>-48%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Operating breakeven</strong> at Month 15 post-launch (~7,500
+subscribers). Business turns operating cash-flow positive in Year 3 on a
+monthly basis. Full investment recovery (including $478K build) in Year
+4–5.</p>
+<p><strong>Cash flow with $700K raise:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Cash Flow</th>
+<th>Cumulative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raise</td>
+<td>+$700,000</td>
+<td>+$700,000</td>
+</tr>
+<tr class="even">
+<td>Build (11 months × $41.3K)</td>
+<td>−$454,300</td>
+<td>+$245,700</td>
+</tr>
+<tr class="odd">
+<td>Validation gate</td>
+<td>−$25,000</td>
+<td>+$220,700</td>
+</tr>
+<tr class="even">
+<td>Year 1 EBIT</td>
+<td>−$283,750</td>
+<td>−$63,050</td>
+</tr>
+<tr class="odd">
+<td>Year 2 EBIT</td>
+<td>−$259,700</td>
+<td>−$322,750</td>
+</tr>
+</tbody>
+</table>
+<p><strong>At $700K raise: cash runs out in Year 2.</strong> A
+$800K–$850K raise provides comfortable runway through Year 3.</p>
+<hr />
+<h3 id="section-14-revenue-vs.-intake">Section 14: Revenue
+vs. Intake</h3>
+<p>The intake projected $3,390,000 in 3-year revenue. This model
+projects $1,491,000 (56% reduction). The gap is explained by the pricing
+decision:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Factor</th>
+<th>Intake Implied</th>
+<th>Business Case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Blended ARPU</td>
+<td>~$11.70/month</td>
+<td>$5.00/month</td>
+</tr>
+<tr class="even">
+<td>3-Year Revenue</td>
+<td>$3,390,000</td>
+<td>$1,491,000</td>
+</tr>
+</tbody>
+</table>
+<p>The business case deliberately chose $49.99/year to position below
+ABCmouse, maximize subscriber velocity, and build App Store review moat
+faster. This is a defensible strategic choice — but it materially
+changes the financial profile.</p>
+<p><strong>If $9.99/month pricing were used:</strong> - 3-year revenue:
+~$2.97M - Operating breakeven at Month 9–11 (vs. Month 15) - Year 2
+LTV:CAC improves from 1.7:1 to ~3.1:1</p>
+<p>The pricing decision is the central financial trade-off. Lower price
+= faster subscribers and deeper moat; higher price = better unit
+economics and faster breakeven.</p>
+<hr />
+<h2 id="final-recommendation">Final Recommendation</h2>
+<h3 id="build-verdict-conditionally-viable-proceed">BUILD VERDICT:
+CONDITIONALLY VIABLE — PROCEED</h3>
+<p><strong>What makes this viable:</strong> - Cleared competitive field:
+Tappity abandoned, PBS in decline, no credible Android competitor - 500K
+warm social followers = ~$35 blended CAC in Year 1 (exceptional for
+consumer subscription) - 80% gross margin is genuinely strong and
+structurally sound - Flutter + managed services makes a $478K all-in
+build possible in 2026 - 2026 infrastructure maturity window is real and
+has a 24-month decay clock</p>
+<p><strong>Critical success factors:</strong> 1. <strong>Raise
+$800K–$850K</strong> — $700K is insufficient for Year 2 without bridge
+financing 2. <strong>Execute $25K validation gate first</strong> —
+confirm social-to-paid conversion before committing full build 3.
+<strong>COPPA architecture at Week 1</strong> — assign to Tech Lead, not
+Post-MVP; retrofitting costs $50K–$150K 4. <strong>Hire Flutter Tech
+Lead with Kids Category experience</strong> — the Dart + COPPA
+intersection is specialized 5. <strong>Year 2 family plan + age 9–12
+content</strong> — these are the LTV/churn improvements that determine
+sustainable unit economics</p>
+<p><strong>What makes this conditional:</strong> - Year 2 LTV:CAC of
+1.7:1 is below 3:1 investor threshold without churn mitigation - $800K
+raise is at the high end for a pre-launch consumer app - 18-month build
++ ops runway is tight; any schedule slip extends cash requirement -
+Social audience conversion (0.5% to paid in Month 1) is unvalidated
+until the gate</p>
+<p><strong>Build or wait?</strong></p>
+<p><strong>Build now.</strong> The combination of cleared competitive
+field, social audience freshness (24-month window), and 2026
+infrastructure maturity creates a specific window that closes by
+2027–2028 as Android-first competitors recognize the gap and a motivated
+creator with a larger following enters.</p>
+<hr />
+<p><em>Business Case prepared by: Research Agent (AGE-2720) · Industry
+Expert (AGE-2721) · Competitive Strategist (AGE-2723) · Business
+Strategy Expert (AGE-2724) · Business Analyst (AGE-2725) · CTO
+(AGE-2726) · Business Analyst Financial Model (AGE-2727)</em><br />
+<em>Pipeline: AGE-2714 | Report generated: 2026-05-02</em></p>
+</body>
+</html>
